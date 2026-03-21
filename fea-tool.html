@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python FEA Analysis Tool | Aidan Law</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="nav-logo">Aidan Law</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero section fade-in-up">
+        <div class="container project-hero-content">
+            <h1>Python FEA Analysis Tool</h1>
+            <p class="hero-subtitle">Custom Physics Engine • Python • Theoretical Numerical Methods</p>
+        </div>
+    </header>
+
+    <!-- Project Media Immersive Edge-to-Edge -->
+    <div class="project-media-full fade-in-up">
+        <img src="assets/featoolonline.jpg" alt="Python FEA Analysis Tool"
+            style="width: 100%; height: 60vh; object-fit: cover; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    </div>
+
+    <!-- Project Details -->
+    <article class="project-details section container fade-in-up">
+        <div class="project-grid-2col">
+            <div class="project-text">
+                <h2>Project Overview</h2>
+                <p>
+                    Demonstrating a deep understanding of computational mechanics, this project involved writing a
+                    custom Finite Element Analysis (FEA) solver from absolute scratch using Python. The goal was to
+                    bridge the gap between theoretical classroom mathematics and applicable software engineering,
+                    creating a tool capable of solving complex multi-physics problems without relying on commercial
+                    "black box" software.
+                </p>
+                <p>
+                    The core engine was built to handle 1D, 2D, and eventually 3D geometries. By strictly adhering to
+                    Object-Oriented Programming (OOP) principles, the architecture allows users to easily add new
+                    element types or material models. Utilized the SciPy library to efficiently assemble and invert
+                    large, sparse stiffness matrices, drastically reducing computation time for fine meshes.
+                </p>
+                <p>
+                    To validate the solver, the output was directly benchmarked against verified results from leading
+                    CAD Software
+                    and analytical hand-calculations. Integration with Gmsh provided a robust frontend for mesh
+                    generation, allowing the tool to parse standard `.msh` files directly into the custom solver
+                    environments.
+                </p>
+
+                <h2>Key Contributions</h2>
+                <ul class="apple-list">
+                    <li>Developed a custom Python solver utilizing NumPy and SciPy to process large sparse matrices for
+                        structural analysis.</li>
+                    <li>Integrated the application with open-source tools like Gmsh for mesh generation and OpenSees for
+                        benchmarking solver accuracy.</li>
+                    <li>Successfully translated theoretical numerical methods (Galerkin method, shape functions,
+                        stiffness matrix assembly) into highly optimized, executable code.</li>
+                </ul>
+            </div>
+            <div class="project-sidebar">
+                <div class="sidebar-card">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">SciPy</span>
+                        <span class="tag">Gmsh</span>
+                        <span class="tag">Software Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div style="margin-top: var(--spacing-lg); text-align: center;">
+            <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer section">
+        <div class="container footer-content">
+            <h2>Let's Connect.</h2>
+            <p>Phone: 848-215-8484 <br> Email: <a href="mailto:ajay.law810@gmail.com">ajay.law810@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn"
+                    class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 2rem; color: #a1a1a6; font-size: 0.75rem;">© 2026 Aidan Law. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

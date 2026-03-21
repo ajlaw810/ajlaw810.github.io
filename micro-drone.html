@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Printed Micro-Drone | Aidan Law</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="nav-logo">Aidan Law</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero section fade-in-up">
+        <div class="container project-hero-content">
+            <h1>3D-Printed Micro-Drone</h1>
+            <p class="hero-subtitle">Topology Optimization • FDM Prototyping • Mass Reduction</p>
+        </div>
+    </header>
+
+    <!-- Project Media Immersive Edge-to-Edge -->
+    <div class="project-media-full fade-in-up">
+        <img src="assets/micro-drone.jpg" alt="3D-Printed Micro-Drone"
+            style="width: 100%; height: 60vh; object-fit: cover; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    </div>
+
+    <!-- Project Details -->
+    <article class="project-details section container fade-in-up">
+        <div class="project-grid-2col">
+            <div class="project-text">
+                <h2>Project Overview</h2>
+                <p>
+                    Designing an aerospace frame requires an aggressive balance between strength and weight. This
+                    personal project focused on designing, simulating, and 3D printing an ultra-lightweight chassis for
+                    a high-performance racing micro-drone. The design philosophy heavily relied on minimizing
+                    aerodynamic drag while maximizing the structural rigidity needed to withstand high-G maneuvers.
+                </p>
+                <p>
+                    The initial CAD was developed in Fusion 360, where we applied Generative Design and topology
+                    optimization algorithms. By defining specific load cases—such as motor thrust vectors, battery
+                    weight, and anticipated impact forces—the software organically removed non-critical material. This
+                    resulted in an alien-like, highly optimized geometry that shed 35% of the original mass.
+                </p>
+                <p>
+                    Manufacturing the frame presented its own challenges. We utilized Fused Deposition Modeling (FDM)
+                    with advanced carbon-fiber infused PLA to achieve the necessary strength-to-weight ratio. Following
+                    fabrication, the frames were subjected to rigorous real-world drop tests, iterative redesigns, and
+                    final flight validation.
+                </p>
+
+                <h2>Key Contributions</h2>
+                <ul class="apple-list">
+                    <li>Utilized advanced generative design and topology optimization algorithms in Fusion 360 to
+                        achieve maximum mass reduction while maintaining stiffness.</li>
+                    <li>Manufactured the optimized frame prototypes iteratively using FDM 3D printing with lightweight,
+                        durable carbon-fiber infused PLA.</li>
+                    <li>Subjected prototypes to rigorous real-world drop-test survival metrics, iteratively refining the
+                        design until critical failure points were eliminated.</li>
+                </ul>
+            </div>
+            <div class="project-sidebar">
+                <div class="sidebar-card">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Fusion 360</span>
+                        <span class="tag">Generative Design</span>
+                        <span class="tag">3D Printing (FDM)</span>
+                        <span class="tag">Materials Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div style="margin-top: var(--spacing-lg); text-align: center;">
+            <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer section">
+        <div class="container footer-content">
+            <h2>Let's Connect.</h2>
+            <p>Phone: 848-215-8484 <br> Email: <a href="mailto:ajay.law810@gmail.com">ajay.law810@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn"
+                    class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 2rem; color: #a1a1a6; font-size: 0.75rem;">© 2026 Aidan Law. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

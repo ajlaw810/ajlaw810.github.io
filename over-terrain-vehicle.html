@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over-Terrain Autonomous Vehicle | Aidan Law</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="nav-logo">Aidan Law</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-nav-overlay">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Project Hero -->
+    <header class="project-hero section fade-in-up">
+        <div class="container project-hero-content">
+            <h1>Over-Terrain Autonomous Vehicle</h1>
+            <p class="hero-subtitle">1st Place Award • Arduino Integration • SolidWorks Hardware Design</p>
+        </div>
+    </header>
+
+    <!-- Project Media Immersive Edge-to-Edge -->
+    <div class="project-media-full fade-in-up">
+        <img src="assets/over-terrain-vehicle.jpg" alt="Over-Terrain Autonomous Vehicle" style="width: 100%; height: 60vh; object-fit: cover; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    </div>
+
+    <!-- Project Details -->
+    <article class="project-details section container fade-in-up">
+        <div class="project-grid-2col">
+            <div class="project-text">
+                <h2>Project Overview</h2>
+                <p>
+                    This project involved the end-to-end design, fabrication, and programming of an autonomous vehicle capable of traversing rugged, unpredictable terrain. As the lead mechanical designer, I was tasked with engineering a robust chassis that maintains structural integrity while minimizing mass. The goal was to seamlessly integrate complex mechatronic subsystems into a cohesive, highly functional prototype. 
+                </p>
+                <p>
+                    The design process required a deep understanding of dynamic loads and vibrational analysis. We leveraged iterative prototyping and finite element analysis (FEA) to ensure that the suspension and drivetrain could withstand high impact forces without catastrophic failure. This rigorous approach fundamentally changed our perspective on iterative mechanical design, highlighting the intersection between physical constraints and computational capabilities.
+                </p>
+                <p>
+                    Furthermore, the electrical architecture had to be meticulously planned to avoid interference with the mechanical systems. Custom PCB mounts and flexible wiring harnesses were designed directly within the SolidWorks environment to guarantee optimal spatial efficiency and maintain an elegant internal layout.
+                </p>
+                
+                <h2>Key Contributions</h2>
+                <ul class="apple-list">
+                    <li>Developed custom SolidWorks mounting hardware tailored to house custom electronics.</li>
+                    <li>Integrated an Arduino microcontroller to process sensor data and command motor drivers efficiently.</li>
+                    <li>Led the team to achieve a 1st place award in the culminating engineering design competition against 40+ teams.</li>
+                </ul>
+            </div>
+            <div class="project-sidebar">
+                <div class="sidebar-card">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags">
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">Arduino</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Mechatronics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider"></div>
+
+        <div style="margin-top: var(--spacing-lg); text-align: center;">
+            <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer section">
+        <div class="container footer-content">
+            <h2>Let's Connect.</h2>
+            <p>Phone: 848-215-8484 <br> Email: <a href="mailto:ajay.law810@gmail.com">ajay.law810@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn" class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 2rem; color: #a1a1a6; font-size: 0.75rem;">© 2026 Aidan Law. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

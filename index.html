@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan Law | Mechanical Engineering Portfolio</title>
+    <!-- Use Inter font for a clean, Apple-like aesthetic without SF Pro licensing issues -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for LinkedIn icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="nav-logo">Aidan Law</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="reveal-blur"><span class="text-gradient">Mechanical Engineer.</span> <br>Designing for the
+                future.</h1>
+            <p class="hero-subtitle reveal-blur delay-1">
+                I'm Aidan Law, a Mechanical Engineering student at the University of Maryland. <br>
+                Currently mastering <span class="typewriter-text"></span>
+            </p>
+            <div class="hero-actions reveal-blur delay-2">
+                <a href="assets/AidanLawOnlineResume.pdf" class="btn btn-primary" target="_blank" download>Download
+                    Resume</a>
+            </div>
+            <div class="hero-stats reveal-blur delay-3">
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="6" data-suffix="+">0+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="1" data-suffix="st">0</span>
+                    <span class="stat-label">Place Award</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="4" data-suffix="+">0+</span>
+                    <span class="stat-label">Engineering Tools</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section">
+        <div class="container">
+            <h2 class="section-title reveal-blur">Selected Works.</h2>
+
+            <div class="projects-grid">
+                <!-- Core Projects -->
+                <a href="over-terrain-vehicle.html" class="project-card reveal-scale">
+                    <div class="project-image" style="background-image: url('assets/over-terrain-vehicle.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Over-Terrain Autonomous Vehicle</h3>
+                        <p>1st place award, Arduino integration, and custom SolidWorks mounting hardware.</p>
+                    </div>
+                </a>
+
+                <a href="mep-design.html" class="project-card reveal-scale delay-1">
+                    <div class="project-image" style="background-image: url('assets/mep-design.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Residential MEP Design</h3>
+                        <p>Revit electrical coordination, 120/240V power distribution, and custom view templates.</p>
+                    </div>
+                </a>
+
+                <a href="drill-press.html" class="project-card reveal-scale delay-2">
+                    <div class="project-image" style="background-image: url('assets/drill-press.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Drill Press Assembly</h3>
+                        <p>30-component SolidWorks assembly, static FEA simulations (500 kg load).</p>
+                    </div>
+                </a>
+
+                <a href="fea-tool.html" class="project-card reveal-scale">
+                    <div class="project-image" style="background-image: url('assets/featoolonline.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Python FEA Analysis Tool</h3>
+                        <p>Gmsh & OpenSees integration translating theoretical numerical methods into code.</p>
+                    </div>
+                </a>
+
+                <!-- Additional Projects -->
+                <a href="micro-drone.html" class="project-card reveal-scale delay-1">
+                    <div class="project-image" style="background-image: url('assets/micro-drone.jpg');"></div>
+                    <div class="project-info">
+                        <h3>3D-Printed Micro-Drone</h3>
+                        <p>Topology optimization for mass reduction and drop-test survival metrics.</p>
+                    </div>
+                </a>
+
+                <a href="data-pipeline.html" class="project-card reveal-scale delay-2">
+                    <div class="project-image" style="background-image: url('assets/data-pipeline.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Automated Data Pipeline</h3>
+                        <p>Python, SQL, & VBA scripts reducing deck generation time to just 5 minutes.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer section">
+        <div class="container footer-content reveal-blur">
+            <h2>Let's Connect.</h2>
+            <p>Phone: 848-215-8484 <br> Email: <a href="mailto:ajay.law810@gmail.com">ajay.law810@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn"
+                    class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 2rem; color: #a1a1a6; font-size: 0.75rem;">© 2026 Aidan Law. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
