@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aidan Law | Mechanical Engineering Portfolio</title>
-    <!-- Use Inter font for a clean, Apple-like aesthetic without SF Pro licensing issues -->
+    <!-- Google Fonts: Instrument Serif (Header), Space Grotesk (Mono/Tech), Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for LinkedIn icon -->
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://aidanlaw810.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://aidanlaw810.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
-<body>
+<body class="cad-grid-bg">
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-content">
-            <a href="index.html" class="nav-logo">Aidan Law</a>
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">Aidan Law</a>
+                <span class="nav-subtag">Mechanical Engineering</span>
+            </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -34,89 +36,224 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Asymmetric Hero Section -->
     <header class="hero">
-        <div class="container hero-content">
-            <h1 class="reveal-blur"><span class="text-gradient">Mechanical Engineer.</span> <br>Designing for the
-                future.</h1>
-            <p class="hero-subtitle reveal-blur delay-1">
-                I'm Aidan Law, a Mechanical Engineering student at the University of Maryland. <br>
-                Currently mastering <span class="typewriter-text"></span>
-            </p>
-            <div class="hero-actions reveal-blur delay-2">
-                <a href="assets/AidanLawOnlineResume.pdf" class="btn btn-primary" target="_blank" download>Download
-                    Resume</a>
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Editorial Showcase -->
+                <div class="hero-editorial reveal-blur">
+                    <div class="telemetry-badge">
+                        <span class="telemetry-dot"></span>
+                        Status: Active Build & Research Log
+                    </div>
+                    <h1>Mechanical Engineer. <br><em>Designing physical systems with mathematical precision.</em></h1>
+                    <p class="hero-subtitle">
+                        I'm Aidan Law, a Mechanical Engineering student at the University of Maryland.<br>
+                        Currently mastering <span class="typewriter-text"></span>
+                    </p>
+                    <div class="hero-actions">
+                        <a href="assets/AidanLawOnlineResume.pdf" class="btn btn-primary" target="_blank" download>
+                            <span>Download Resume [PDF]</span>
+                            <i class="fas fa-arrow-down" style="font-size: 0.8rem;"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>Explore Projects</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Engineering Focus Domains Card (Spacious & Uncrowded) -->
+                <div class="hero-spec-sidebar reveal-blur delay-1">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <span class="cad-crosshair bottom-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="sidebar-top-bar">
+                        <span class="coord-stamp">COLLEGE PARK, MD</span>
+                        <span class="project-tag-pill">UMD B.S. MECH ENG</span>
+                    </div>
+
+                    <div class="domain-list">
+                        <div class="domain-item">
+                            <div class="domain-icon"><i class="fas fa-cube"></i></div>
+                            <div class="domain-text">
+                                <h4>CAD & Mechanical Design</h4>
+                                <p>SolidWorks, Revit, 30+ Part Assemblies</p>
+                            </div>
+                        </div>
+
+                        <div class="domain-item">
+                            <div class="domain-icon"><i class="fas fa-chart-area"></i></div>
+                            <div class="domain-text">
+                                <h4>FEA & Simulation Solvers</h4>
+                                <p>Static Stress Analysis, OpenSees, Python</p>
+                            </div>
+                        </div>
+
+                        <div class="domain-item">
+                            <div class="domain-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="domain-text">
+                                <h4>Prototyping & Mechatronics</h4>
+                                <p>3D Printing (FDM), Arduino, Six Sigma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-stats reveal-blur delay-3">
-                <div class="hero-stat">
-                    <span class="stat-number" data-target="6" data-suffix="+">0+</span>
-                    <span class="stat-label">Projects</span>
+
+            <!-- Telemetry Stats Strip -->
+            <div class="hero-stats-strip reveal-blur delay-2">
+                <div class="stat-block">
+                    <span class="stat-number" data-target="5" data-suffix="+">0+</span>
+                    <span class="stat-label">[01] Projects Built</span>
                 </div>
-                <div class="hero-stat">
+                <div class="stat-block">
                     <span class="stat-number" data-target="1" data-suffix="st">0</span>
-                    <span class="stat-label">Place Award</span>
+                    <span class="stat-label">[02] Place Design Award</span>
                 </div>
-                <div class="hero-stat">
+                <div class="stat-block">
                     <span class="stat-number" data-target="4" data-suffix="+">0+</span>
-                    <span class="stat-label">Engineering Tools</span>
+                    <span class="stat-label">[03] Engineering Tools</span>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section section">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title reveal-blur">Selected Works.</h2>
+            <div class="projects-header reveal-blur">
+                <div>
+                    <div class="telemetry-badge">
+                        <span class="telemetry-dot"></span>
+                        Selected Artifacts & Prototyping Log
+                    </div>
+                    <h2>Projects & Built Showcase.</h2>
+                </div>
+                <span class="coord-stamp">SORTED BY STRUCTURAL COMPLEXITY // REV 2.4</span>
+            </div>
 
             <div class="projects-grid">
-                <!-- Core Projects -->
-                <a href="over-terrain-vehicle.html" class="project-card reveal-scale">
-                    <div class="project-image" style="background-image: url('assets/over-terrain-vehicle.jpg');"></div>
+                <!-- FEATURED 2-COLUMN PROJECT CARD -->
+                <a href="over-terrain-vehicle.html" class="project-card featured-card reveal-scale">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <span class="cad-crosshair bottom-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background-image: url('assets/over-terrain-vehicle.jpg');"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>Over-Terrain Autonomous Vehicle</h3>
-                        <p>1st place award, Arduino integration, and custom SolidWorks mounting hardware.</p>
+                        <div>
+                            <div class="project-meta">
+                                <span class="project-tag-pill">1ST PLACE AWARD // ROBOTICS</span>
+                                <span class="coord-stamp">SPEC-01</span>
+                            </div>
+                            <h3>Over-Terrain Autonomous Vehicle</h3>
+                            <p>Award-winning autonomous rover featuring custom SolidWorks mounting hardware, sensor integration, and micro-controller motor feedback loops.</p>
+                        </div>
+                        <div class="project-footer">
+                            <span>SolidWorks • Arduino • C++</span>
+                            <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </a>
 
+                <!-- PROJECT 2: MEP DESIGN -->
                 <a href="mep-design.html" class="project-card reveal-scale delay-1">
-                    <div class="project-image" style="background-image: url('assets/mep-design.jpg');"></div>
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background-image: url('assets/mep-design.jpg');"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>Residential MEP Design</h3>
-                        <p>Revit electrical coordination, 120/240V power distribution, and custom view templates.</p>
+                        <div>
+                            <div class="project-meta">
+                                <span class="project-tag-pill">BIM / REVIT</span>
+                                <span class="coord-stamp">SPEC-02</span>
+                            </div>
+                            <h3>Residential MEP Design</h3>
+                            <p>Comprehensive Revit electrical coordination, 120/240V power distribution schematics, and custom parameter view templates.</p>
+                        </div>
+                        <div class="project-footer">
+                            <span>Autodesk Revit • Electrical</span>
+                            <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </a>
 
+                <!-- PROJECT 3: DRILL PRESS ASSEMBLY -->
                 <a href="drill-press.html" class="project-card reveal-scale delay-2">
-                    <div class="project-image" style="background-image: url('assets/drill-press.jpg');"></div>
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background-image: url('assets/drill-press.jpg');"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>Drill Press Assembly</h3>
-                        <p>30-component SolidWorks assembly, static FEA simulations (500 kg load).</p>
+                        <div>
+                            <div class="project-meta">
+                                <span class="project-tag-pill">SOLIDWORKS / FEA</span>
+                                <span class="coord-stamp">SPEC-03</span>
+                            </div>
+                            <h3>Drill Press Assembly & FEA</h3>
+                            <p>30-component precision SolidWorks assembly subjected to static 500 kg FEA stress and von Mises yield criterion simulations.</p>
+                        </div>
+                        <div class="project-footer">
+                            <span>SolidWorks Simulation • FEA</span>
+                            <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </a>
 
+                <!-- PROJECT 4: PYTHON FEA TOOL -->
                 <a href="fea-tool.html" class="project-card reveal-scale">
-                    <div class="project-image" style="background-image: url('assets/featoolonline.jpg');"></div>
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background-image: url('assets/featoolonline.jpg');"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>Python FEA Analysis Tool</h3>
-                        <p>Gmsh & OpenSees integration translating theoretical numerical methods into code.</p>
+                        <div>
+                            <div class="project-meta">
+                                <span class="project-tag-pill">NUMERICAL SOLVER</span>
+                                <span class="coord-stamp">SPEC-04</span>
+                            </div>
+                            <h3>Python FEA Analysis Engine</h3>
+                            <p>Translating theoretical matrix structural analysis into code utilizing Gmsh mesh generation and OpenSees numerical solvers.</p>
+                        </div>
+                        <div class="project-footer">
+                            <span>Python • Gmsh • OpenSees</span>
+                            <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Additional Projects -->
+                <!-- PROJECT 5: LEAN PHONE STAND -->
                 <a href="phone-stand.html" class="project-card reveal-scale delay-1">
-                    <div class="project-image" style="background-image: url('assets/phone-stand.png');"></div>
-                    <div class="project-info">
-                        <h3>Sub-$1 Lean Phone Stand</h3>
-                        <p>Rapid prototyped utilizing SolidWorks, 3D printing and Lean Six Sigma principles.</p>
-                    </div>
-                </a>
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
 
-                <a href="data-pipeline.html" class="project-card reveal-scale delay-2">
-                    <div class="project-image" style="background-image: url('assets/data-pipeline.jpg');"></div>
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background-image: url('assets/phone-stand.png');"></div>
+                    </div>
                     <div class="project-info">
-                        <h3>Automated Data Pipeline</h3>
-                        <p>Python, SQL, & VBA scripts reducing deck generation time to just 5 minutes.</p>
+                        <div>
+                            <div class="project-meta">
+                                <span class="project-tag-pill">LEAN MANUFACTURING</span>
+                                <span class="coord-stamp">SPEC-05</span>
+                            </div>
+                            <h3>Sub-$1 Lean Phone Stand</h3>
+                            <p>Rapid prototyped utilizing SolidWorks, FDM 3D printing, and Lean Six Sigma waste-reduction principles under $1 per unit.</p>
+                        </div>
+                        <div class="project-footer">
+                            <span>3D Printing • Six Sigma</span>
+                            <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -124,15 +261,32 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer section">
+    <footer id="contact" class="footer">
         <div class="container footer-content reveal-blur">
-            <h2>Let's Connect.</h2>
-            <p>Phone: 848-215-8484 <br> Email: <a href="mailto:ajay.law810@gmail.com">ajay.law810@gmail.com</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn"
-                    class="linkedin-btn"><i class="fab fa-linkedin"></i></a>
+            <div class="telemetry-badge">
+                <span class="telemetry-dot"></span>
+                Direct Signal Channel
             </div>
-            <p style="margin-top: 2rem; color: #a1a1a6; font-size: 0.75rem;">© 2026 Aidan Law. All rights reserved.</p>
+            <h2>Let's Build Something Together.</h2>
+            <p>Open for mechanical engineering roles, hardware design projects, and software automation collaborations.</p>
+            <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-top: -0.5rem;">
+                Phone: <strong>848-215-8484</strong> &nbsp;•&nbsp; Email: <a href="mailto:ajay.law810@gmail.com" style="text-decoration: underline;">ajay.law810@gmail.com</a>
+            </p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/ajlaw810" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+            <p style="color: var(--text-dim); font-size: 0.8rem; font-family: var(--font-mono);">
+                © 2026 Aidan Law. Crafted with tactile care & precision. [REV 2026.4]
+            </p>
         </div>
     </footer>
 
