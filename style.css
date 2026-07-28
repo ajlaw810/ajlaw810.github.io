@@ -259,19 +259,6 @@ a:hover {
   position: relative;
 }
 
-.section-divider::after {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  background: var(--bg-paper);
-  padding: 0 0.5rem;
-}
-
 /* ─── NAVIGATION BAR ─────────────────────────────────────────────────────── */
 .navbar {
   position: fixed;
@@ -878,7 +865,7 @@ a:hover {
   margin-top: 2rem;
 }
 
-/* ─── FOOTER (REFINED & COMPACT BOTTOM SPACING) ──────────────────────────── */
+/* ─── FOOTER (CLEAN & MINIMAL DIVIDER) ─────────────────────────────────── */
 .footer {
   padding: 3rem 0 1.5rem 0;
   background-color: var(--bg-linen);
