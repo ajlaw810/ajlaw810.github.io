@@ -22,33 +22,30 @@
     <nav class="navbar">
         <div class="navbar-content">
             <div class="nav-brand">
-                <a href="index.html" class="nav-logo">Aidan Law</a>
-                <span class="nav-subtag">Mechanical Engineering</span>
+                <a href="#top" class="nav-logo">Aidan Law</a>
+                <span class="nav-subtag">Mechanical Engineering @ UMD</span>
             </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Asymmetric Hero Section -->
-    <header class="hero">
+    <header id="top" class="hero">
         <div class="container">
             <div class="hero-grid">
                 <!-- Left Editorial Showcase -->
                 <div class="hero-editorial reveal-blur">
-                    <div class="telemetry-badge">
-                        <span class="telemetry-dot"></span>
-                        Status: Active Build & Research Log
-                    </div>
-                    <h1>Mechanical Engineer. <br><em>Designing physical systems with mathematical precision.</em></h1>
+                    <h1>Aidan Law. <br><em>Designing physical systems with mathematical precision.</em></h1>
                     <p class="hero-subtitle">
-                        I'm Aidan Law, a Mechanical Engineering student at the University of Maryland.<br>
+                        Mechanical Engineering Student @ UMD.<br>
                         Currently mastering <span class="typewriter-text"></span>
                     </p>
                     <div class="hero-actions">
@@ -62,7 +59,7 @@
                     </div>
                 </div>
 
-                <!-- Right Engineering Focus Domains Card (Spacious & Uncrowded) -->
+                <!-- Right Engineering Focus Domains Card -->
                 <div class="hero-spec-sidebar reveal-blur delay-1">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair top-right">+</span>
@@ -70,7 +67,7 @@
                     <span class="cad-crosshair bottom-right">+</span>
 
                     <div class="sidebar-top-bar">
-                        <span class="coord-stamp">COLLEGE PARK, MD</span>
+                        <span class="coord-stamp">MARYLAND, USA</span>
                         <span class="project-tag-pill">UMD B.S. MECH ENG</span>
                     </div>
 
@@ -125,17 +122,13 @@
         <div class="container">
             <div class="projects-header reveal-blur">
                 <div>
-                    <div class="telemetry-badge">
-                        <span class="telemetry-dot"></span>
-                        Selected Artifacts & Prototyping Log
-                    </div>
                     <h2>Projects & Built Showcase.</h2>
                 </div>
                 <span class="coord-stamp">SORTED BY STRUCTURAL COMPLEXITY // REV 2.4</span>
             </div>
 
             <div class="projects-grid">
-                <!-- FEATURED 2-COLUMN PROJECT CARD -->
+                <!-- PROJECT 1: OVER-TERRAIN AUTONOMOUS VEHICLE -->
                 <a href="over-terrain-vehicle.html" class="project-card featured-card reveal-scale">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair top-right">+</span>
@@ -147,21 +140,39 @@
                     </div>
                     <div class="project-info">
                         <div>
+                            <div class="card-logo-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="9" rx="2"/>
+                                    <circle cx="6" cy="18" r="3"/>
+                                    <circle cx="18" cy="18" r="3"/>
+                                    <path d="M7 7V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                                </svg>
+                            </div>
                             <div class="project-meta">
                                 <span class="project-tag-pill">1ST PLACE AWARD // ROBOTICS</span>
                                 <span class="coord-stamp">SPEC-01</span>
                             </div>
                             <h3>Over-Terrain Autonomous Vehicle</h3>
-                            <p>Award-winning autonomous rover featuring custom SolidWorks mounting hardware, sensor integration, and micro-controller motor feedback loops.</p>
+                            <ul class="project-bullet-list">
+                                <li>Awarded <strong>1st place</strong> in a university competition for designing an autonomous vehicle capable of multi-terrain navigation.</li>
+                                <li>Integrated IMU and ultrasonic sensors using custom <strong>C++</strong> routines for real-time obstacle avoidance and spatial orientation.</li>
+                                <li>Modeled lightweight chassis hardware and custom sensor housings in <strong>SolidWorks</strong>, optimizing weight distribution.</li>
+                            </ul>
                         </div>
                         <div class="project-footer">
-                            <span>SolidWorks • Arduino • C++</span>
+                            <div class="tech-tags-list">
+                                <span class="tag">[Arduino]</span>
+                                <span class="tag">[C++]</span>
+                                <span class="tag">[SolidWorks]</span>
+                                <span class="tag">[Advanced Sensors]</span>
+                                <span class="tag">[Omni-Wheels]</span>
+                            </div>
                             <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
                 </a>
 
-                <!-- PROJECT 2: DRONE ROTOR BLADE OPTIMIZATION -->
+                <!-- PROJECT 2: PARAMETRIC DRONE PROPELLER STUDY -->
                 <a href="drone-blade-design.html" class="project-card reveal-scale delay-1">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair bottom-right">+</span>
@@ -171,21 +182,41 @@
                     </div>
                     <div class="project-info">
                         <div>
+                            <div class="card-logo-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 9V2M12 15v7M9 12H2M15 12h7"/>
+                                    <circle cx="12" cy="2" r="1.5"/>
+                                    <circle cx="12" cy="22" r="1.5"/>
+                                    <circle cx="2" cy="12" r="1.5"/>
+                                    <circle cx="22" cy="12" r="1.5"/>
+                                </svg>
+                            </div>
                             <div class="project-meta">
                                 <span class="project-tag-pill">MATLAB & AERODYNAMICS</span>
                                 <span class="coord-stamp">SPEC-02</span>
                             </div>
-                            <h3>Drone Rotor Blade Optimization</h3>
-                            <p>Aerodynamic drone blade design utilizing MATLAB Blade Element Momentum (BEM) algorithms and SolidWorks parametric airfoil modeling.</p>
+                            <h3>Parametric Drone Propeller Study</h3>
+                            <ul class="project-bullet-list">
+                                <li>Developed a custom <strong>Blade Element Method (BEM)</strong> aerodynamic solver in <strong>MATLAB</strong> to evaluate parametric drone blade geometries.</li>
+                                <li>Generated parametric 3D airfoil profiles in <strong>SolidWorks</strong> and conducted static <strong>FEA</strong> under combined aerodynamic and centrifugal loads.</li>
+                                <li>Achieved a <strong>~50% calculated increase</strong> in hover efficiency and <strong>1.9 lb peak thrust</strong> compared to commercial benchmarks.</li>
+                            </ul>
                         </div>
                         <div class="project-footer">
-                            <span>MATLAB • SolidWorks • Aerodynamics</span>
+                            <div class="tech-tags-list">
+                                <span class="tag">[MATLAB]</span>
+                                <span class="tag">[SolidWorks]</span>
+                                <span class="tag">[FEA]</span>
+                                <span class="tag">[Aerodynamics]</span>
+                                <span class="tag">[BEM Algorithm]</span>
+                            </div>
                             <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
                 </a>
 
-                <!-- PROJECT 3: DRILL PRESS ASSEMBLY -->
+                <!-- PROJECT 3: DRILL PRESS ASSEMBLY & FEA -->
                 <a href="drill-press.html" class="project-card reveal-scale delay-2">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair bottom-right">+</span>
@@ -195,21 +226,35 @@
                     </div>
                     <div class="project-info">
                         <div>
+                            <div class="card-logo-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v8M8 6h8M9 10h6v4H9zM12 14v8M8 22h8"/>
+                                </svg>
+                            </div>
                             <div class="project-meta">
                                 <span class="project-tag-pill">SOLIDWORKS / FEA</span>
                                 <span class="coord-stamp">SPEC-03</span>
                             </div>
                             <h3>Drill Press Assembly & FEA</h3>
-                            <p>30-component precision SolidWorks assembly subjected to static 500 kg FEA stress and von Mises yield criterion simulations.</p>
+                            <ul class="project-bullet-list">
+                                <li>Engineered a <strong>30-component</strong> drill press model in <strong>SolidWorks</strong> using parametric mating and constraint-based assembly techniques.</li>
+                                <li>Executed static <strong>FEA</strong> simulations validating structural integrity under a <strong>500 kg</strong> operating load without permanent deformation.</li>
+                                <li>Produced a <strong>270-part</strong> technical drawing package with standardized <strong>GD&T</strong>, exploded views, and a complete Bill of Materials.</li>
+                            </ul>
                         </div>
                         <div class="project-footer">
-                            <span>SolidWorks Simulation • FEA</span>
+                            <div class="tech-tags-list">
+                                <span class="tag">[SolidWorks]</span>
+                                <span class="tag">[FEA Simulation]</span>
+                                <span class="tag">[GD&T]</span>
+                                <span class="tag">[CAD Assembly]</span>
+                            </div>
                             <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
                 </a>
 
-                <!-- PROJECT 4: PYTHON FEA TOOL -->
+                <!-- PROJECT 4: CUSTOM FEA ANALYSIS ENGINE -->
                 <a href="fea-tool.html" class="project-card reveal-scale">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair bottom-right">+</span>
@@ -219,21 +264,38 @@
                     </div>
                     <div class="project-info">
                         <div>
+                            <div class="card-logo-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                    <polyline points="2 17 12 22 22 17"/>
+                                    <polyline points="2 12 12 17 22 12"/>
+                                </svg>
+                            </div>
                             <div class="project-meta">
                                 <span class="project-tag-pill">NUMERICAL SOLVER</span>
                                 <span class="coord-stamp">SPEC-04</span>
                             </div>
-                            <h3>Python FEA Analysis Engine</h3>
-                            <p>Translating theoretical matrix structural analysis into code utilizing Gmsh mesh generation and OpenSees numerical solvers.</p>
+                            <h3>Custom FEA Analysis Engine</h3>
+                            <ul class="project-bullet-list">
+                                <li>Built a custom <strong>Finite Element Analysis</strong> tool in <strong>Python</strong> to simulate stress distribution and deformation under gravitational loads.</li>
+                                <li>Integrated <strong>Gmsh</strong> for dynamic mesh generation and <strong>OpenSees</strong> for core matrix structural analysis calculations.</li>
+                                <li>Created visualization routines to map von Mises stress concentrations across custom 3D geometries.</li>
+                            </ul>
                         </div>
                         <div class="project-footer">
-                            <span>Python • Gmsh • OpenSees</span>
+                            <div class="tech-tags-list">
+                                <span class="tag">[Python]</span>
+                                <span class="tag">[Gmsh]</span>
+                                <span class="tag">[OpenSees]</span>
+                                <span class="tag">[Numerical Methods]</span>
+                                <span class="tag">[SolidWorks]</span>
+                            </div>
                             <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
                 </a>
 
-                <!-- PROJECT 5: LEAN PHONE STAND -->
+                <!-- PROJECT 5: SUB-$1 LEAN PHONE STAND -->
                 <a href="phone-stand.html" class="project-card reveal-scale delay-1">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair bottom-right">+</span>
@@ -243,15 +305,31 @@
                     </div>
                     <div class="project-info">
                         <div>
+                            <div class="card-logo-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                </svg>
+                            </div>
                             <div class="project-meta">
                                 <span class="project-tag-pill">LEAN MANUFACTURING</span>
                                 <span class="coord-stamp">SPEC-05</span>
                             </div>
                             <h3>Sub-$1 Lean Phone Stand</h3>
-                            <p>Rapid prototyped utilizing SolidWorks, FDM 3D printing, and Lean Six Sigma waste-reduction principles under $1 per unit.</p>
+                            <ul class="project-bullet-list">
+                                <li>Designed a minimalist, foldable phone support structure optimized for high-volume, low-cost production under <strong>$1.00 per unit</strong>.</li>
+                                <li>Applied <strong>Design for Manufacturability (DFM)</strong> principles to minimize material usage and cycle times without sacrificing stiffness.</li>
+                                <li>Validated mechanical stability across multiple device weight classes and orientation angles.</li>
+                            </ul>
                         </div>
                         <div class="project-footer">
-                            <span>3D Printing • Six Sigma</span>
+                            <div class="tech-tags-list">
+                                <span class="tag">[Lean Manufacturing]</span>
+                                <span class="tag">[DFM]</span>
+                                <span class="tag">[CAD Design]</span>
+                                <span class="tag">[Cost Optimization]</span>
+                            </div>
                             <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                         </div>
                     </div>
@@ -260,32 +338,215 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Experience & Education Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="projects-header reveal-blur">
+                <div>
+                    <h2>Experience & Education.</h2>
+                </div>
+                <span class="coord-stamp">CAREER PATH & TECHNICAL HISTORY</span>
+            </div>
+
+            <div class="experience-grid reveal-blur">
+                <!-- EXPERIENCE CARD 1: MW COMPONENTS -->
+                <div class="experience-card accordion-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <span class="cad-crosshair bottom-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="exp-header">
+                        <div class="card-logo-badge">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="exp-role-meta">
+                            <span class="project-tag-pill">MANUFACTURING ENGINEERING INTERN</span>
+                            <span class="coord-stamp">MAY 2026 – PRESENT</span>
+                        </div>
+                        <h3>MW Components (Accurate Screw Machine)</h3>
+                        <p class="exp-subtitle">Fairfield, NJ • Manufacturing Engineering Intern</p>
+                        <div class="exp-tags-bar">
+                            <span class="tag-chip">[SolidWorks API]</span>
+                            <span class="tag-chip">[C# Automation]</span>
+                            <span class="tag-chip">[Python]</span>
+                            <span class="tag-chip">[ISO 9001 / AS9100D]</span>
+                            <span class="tag-chip">[DFM Blueprinting]</span>
+                            <span class="tag-chip">[GD&T Standards]</span>
+                        </div>
+                    </div>
+
+                    <!-- Summary Container (Always Visible) -->
+                    <div class="card-summary">
+                        <ul class="bullet-list">
+                            <li>Developed a <strong>C#</strong> application leveraging the <strong>SolidWorks API</strong> to automate 3D modeling, 2D drawing generation, and quality control checklists, <strong>reducing lead times by 95% (from 45 min to under 30 seconds)</strong> across <strong>1,000+ annual parts</strong>.</li>
+                            <li>Programmed <strong>C#</strong> calculation routines to automatically recalculate <strong>ASME</strong> and <strong>ISO</strong> thread geometry based on plating thickness, eliminating manual rework for 5-axis CNC manufacturing drawings.</li>
+                            <li>Authored corporate <strong>ISO 9001</strong> and <strong>AS9100D</strong> calibration procedures (SOPs) for measuring tools and metrology equipment, <strong>cutting external calibration costs by 75%</strong> and <strong>boosting tool availability by 25%</strong>.</li>
+                            <li>Translated Tier 1 aerospace customer engineering blueprints into floor-ready manufacturing plans compliant with strict <strong>GD&T</strong> standards and part quality assurance inspection criteria.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Details Container (Accordion - Hidden by Default with CSS Grid) -->
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-paragraph">
+                                <strong>1. CAD & Quality Checklist Automation (C# & SolidWorks API)</strong><br>
+                                To eliminate drafting bottlenecks in high-mix, low-volume custom manufacturing, I engineered a standalone C# application that interfaces directly with the SolidWorks API. The tool automates parametric 3D modeling, drawing layout, view scaling, dynamic dimension ballooning, and first-piece quality control checklists. By automatically populating critical properties and notes, the software slashed drawing lead times from up to 45 minutes down to under 30 seconds across more than 1,000 custom parts annually.
+                            </div>
+                            <div class="detail-paragraph">
+                                <strong>2. Coating Offset Math Engine (C# & ASME/ISO Thread Math)</strong><br>
+                                Precision machining for plated fasteners requires complex geometric calculations to offset thread profiles prior to surface treatments. I developed an algorithmic engine in C# that automatically recalculates ASME and ISO thread profiles and pitch tolerances based on user-specified plating thicknesses. This converted over an hour of manual math into instant code execution, delivering exact pre-plate tolerances directly to 5-axis CNC operators and quality inspectors.
+                            </div>
+                            <div class="detail-paragraph">
+                                <strong>3. Quality Calibration System Overhaul (Python & ISO 9001 / AS9100D Compliance)</strong><br>
+                                To overhaul plant-wide metrology management and ensure compliance with ISO 9001 and AS9100D standards, I authored official corporate Standard Operating Procedures (SOPs) for calibrated equipment and built a Python inventory optimization tool. The script analyzes gage usage patterns, floor availability, and failure rates to stagger external recalibration cycles and identify redundant tooling for storage or retirement. This reduced annual external calibration costs by 75% while raising shop-floor tool availability by 25%.
+                            </div>
+                            <div class="detail-paragraph">
+                                <strong>4. Design for Manufacturability (DFM) & Blueprint Conversion</strong><br>
+                                Serving high-precision aerospace and defense clients requires translating complex customer blueprints into standardized internal manufacturing plans. I analyzed customer GD&T callouts, thread specifications, and tolerances to build floor-ready SolidWorks production drawings optimized for 5-axis CNC turning, passivation, and captive assembly operations, ensuring full compliance with part quality assurance standards.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Accordion Toggle Button -->
+                    <button class="card-toggle-btn" aria-expanded="false">
+                        <span>Expand for more detail ↓</span>
+                    </button>
+                </div>
+
+                <!-- EXPERIENCE CARD 2: PUBLICIS HEALTH -->
+                <div class="experience-card accordion-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <span class="cad-crosshair bottom-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="exp-header">
+                        <div class="card-logo-badge">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                                <line x1="14" y1="4" x2="10" y2="20"/>
+                            </svg>
+                        </div>
+                        <div class="exp-role-meta">
+                            <span class="project-tag-pill">DATA ENGINEERING INTERN</span>
+                            <span class="coord-stamp">JUN. 2025 – AUG. 2025</span>
+                        </div>
+                        <h3>Publicis Health</h3>
+                        <p class="exp-subtitle">Morristown, NJ • Data Engineering Intern</p>
+                        <div class="exp-tags-bar">
+                            <span class="tag-chip">[Python]</span>
+                            <span class="tag-chip">[SQL]</span>
+                            <span class="tag-chip">[VBA]</span>
+                            <span class="tag-chip">[Power BI]</span>
+                            <span class="tag-chip">[ETL Pipelines]</span>
+                            <span class="tag-chip">[Data Analytics]</span>
+                        </div>
+                    </div>
+
+                    <!-- Summary Container (Always Visible) -->
+                    <div class="card-summary">
+                        <ul class="bullet-list">
+                            <li>Re-engineered a manual monthly reporting workflow into an automated data pipeline using <strong>Python</strong>, <strong>SQL</strong>, and <strong>VBA</strong>, <strong>reducing process cycle time by 98% (from several hours to 5 minutes)</strong> and eliminating recurring manual errors.</li>
+                            <li>Applied root-cause analysis and data validation routines to campaign performance datasets, writing <strong>Python</strong> scripts to automate stakeholder communications and resolve process bottlenecks.</li>
+                            <li>Executed statistical analyses across <strong>100,000+ records</strong> and built interactive <strong>Power BI</strong> and Excel dashboards to translate complex operational data into actionable pricing and process insights for cross-functional teams.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Details Container (Accordion - Hidden by Default with CSS Grid) -->
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                            <div class="detail-paragraph">
+                                <strong>1. Automated Reporting Pipeline (Python, SQL & VBA)</strong><br>
+                                To streamline monthly operational reporting, I re-engineered a labor-intensive manual workflow into an automated end-to-end data pipeline using Python, SQL, and Excel VBA. The pipeline automates data extraction, transformation, cleaning, and deck generation, reducing process cycle times from several hours to 5 minutes while eliminating recurring manual data-entry errors.
+                            </div>
+                            <div class="detail-paragraph">
+                                <strong>2. Campaign Data Validation & Automation (Python)</strong><br>
+                                Working with high-volume marketing datasets, I implemented root-cause analysis and data validation routines to identify and fix operational bottlenecks. I authored custom Python scripts to validate data integrity and automate stakeholder status updates, improving data accuracy and accelerating cross-functional execution cycles.
+                            </div>
+                            <div class="detail-paragraph">
+                                <strong>3. Operational Analytics & Business Dashboards (Power BI & SQL)</strong><br>
+                                To drive data-informed decision-making across leadership teams, I conducted statistical analyses across datasets exceeding 100,000 operational records. I designed interactive Power BI and Excel dashboards that synthesized complex performance metrics into clear visual insights, directly informing campaign optimizations and pricing strategies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Accordion Toggle Button -->
+                    <button class="card-toggle-btn" aria-expanded="false">
+                        <span>Expand for more detail ↓</span>
+                    </button>
+                </div>
+
+                <!-- EDUCATION CARD: UNIVERSITY OF MARYLAND -->
+                <div class="experience-card education-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <span class="cad-crosshair bottom-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+
+                    <div class="exp-header">
+                        <div class="card-logo-badge">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="exp-role-meta">
+                            <span class="project-tag-pill">ACADEMIC DEGREE</span>
+                            <span class="coord-stamp">SEP. 2024 – MAY 2028</span>
+                        </div>
+                        <h3>University of Maryland</h3>
+                        <p class="exp-subtitle">Bachelor of Science in Mechanical Engineering, Minor in General Business</p>
+                    </div>
+                    <div class="card-summary">
+                        <ul class="bullet-list">
+                            <li><strong>GPA:</strong> 3.63 / 4.00</li>
+                            <li><strong>Honors:</strong> Dean's List (Fall 2024 – Spring 2026)</li>
+                            <li><strong>Campus Organizations:</strong> International Design and Engineering Consortium, Terps Without Hunger</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
     <footer id="contact" class="footer">
         <div class="container footer-content reveal-blur">
-            <div class="telemetry-badge">
-                <span class="telemetry-dot"></span>
-                Direct Signal Channel
-            </div>
             <h2>Let's Build Something Together.</h2>
             <p>Open for mechanical engineering roles, hardware design projects, and software automation collaborations.</p>
-            <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-top: -0.5rem;">
-                Phone: <strong>848-215-8484</strong> &nbsp;•&nbsp; Email: <a href="mailto:ajay.law810@gmail.com" style="text-decoration: underline;">ajay.law810@gmail.com</a>
-            </p>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/aidanjlaw" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
+
+            <div class="contact-circular-row">
+                <a href="mailto:ajay.law810@gmail.com" class="contact-icon-btn" aria-label="Email" title="Email: ajay.law810@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span class="tooltip">Email</span>
                 </a>
-                <a href="https://github.com/ajlaw810" target="_blank" aria-label="GitHub">
+                <a href="tel:848-215-8484" class="contact-icon-btn" aria-label="Phone" title="Phone: 848-215-8484">
+                    <i class="fas fa-phone"></i>
+                    <span class="tooltip">Phone</span>
+                </a>
+                <a href="assets/AidanLawOnlineResume.pdf" class="contact-icon-btn" target="_blank" download aria-label="Download Resume PDF" title="Download Resume PDF">
+                    <i class="fas fa-file-pdf"></i>
+                    <span class="tooltip">Resume PDF</span>
+                </a>
+                <a href="https://www.linkedin.com/in/aidanjlaw" class="contact-icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span class="tooltip">LinkedIn</span>
+                </a>
+                <a href="https://github.com/ajlaw810" class="contact-icon-btn" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub Profile">
                     <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
                 </a>
             </div>
             
             <div class="section-divider"></div>
             
             <p style="color: var(--text-dim); font-size: 0.8rem; font-family: var(--font-mono);">
-                © 2026 Aidan Law. Crafted with tactile care & precision. [REV 2026.4]
+                © 2026 Aidan Law. All rights reserved.
             </p>
             <div style="margin-top: 0.5rem;">
                 <a title="Privacy-friendly Web Analytics" href="https://clicky.com/101509578"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
@@ -296,4 +557,4 @@
     <script src="script.js"></script>
 </body>
 
-</html>
+</html>
