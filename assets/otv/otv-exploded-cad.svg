@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%">
+  <defs>
+    <pattern id="cadGrid2" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="rgba(200, 109, 81, 0.08)" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#1F1D19"/>
+  <rect width="100%" height="100%" fill="url(#cadGrid2)"/>
+
+  <!-- Technical Header -->
+  <text x="25" y="30" font-family="'Space Grotesk', monospace" font-size="10" fill="#E07A5F" font-weight="bold">FIGURE E4.2 // 17-PART MODULAR CAD ASSEMBLY</text>
+  <text x="25" y="45" font-family="'Inter', sans-serif" font-size="9" fill="#888377">Laser-Cut 3mm Acrylic Box • Interlocking Joint Tolerances (±0.05 mm)</text>
+
+  <!-- Exploded Assembly Layers -->
+  <!-- Top Lid Layer -->
+  <g transform="translate(60, 50)">
+    <polygon points="120,30 360,0 420,25 180,55" fill="rgba(224, 122, 95, 0.15)" stroke="#E07A5F" stroke-width="1.5"/>
+    <text x="280" y="20" font-family="'Space Grotesk', monospace" font-size="8" fill="#E07A5F">PART 01-04: TOP ACRYLIC ACCESS LID &amp; MAST BASE</text>
+  </g>
+
+  <!-- Central Electronics & Sensory Tray Layer -->
+  <g transform="translate(60, 130)">
+    <!-- Floating Strain Gauge Scale -->
+    <polygon points="80,40 180,25 210,40 110,55" fill="rgba(221, 161, 94, 0.25)" stroke="#DDA15E" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="140" y="32" font-family="'Space Grotesk', monospace" font-size="8" fill="#DDA15E">PART 05-08: STRAIN GAUGE SCALE</text>
+    
+    <!-- Electronics Plate & Arduino Mount -->
+    <polygon points="210,25 380,5 420,25 250,45" fill="rgba(255, 255, 255, 0.08)" stroke="#BBB6AA" stroke-width="1.2"/>
+    <text x="310" y="18" font-family="'Space Grotesk', monospace" font-size="8" fill="#BBB6AA">PART 09-11: CONTROL TRAY</text>
+  </g>
+
+  <!-- Lower Chassis & Motor Mounts Layer -->
+  <g transform="translate(60, 220)">
+    <!-- Acrylic Side Walls with Finger Joints -->
+    <polygon points="80,50 400,10 440,35 120,75" fill="rgba(44, 41, 37, 0.9)" stroke="#C86D51" stroke-width="1.8"/>
+    
+    <!-- Motor Left -->
+    <rect x="150" y="70" width="35" height="20" rx="3" fill="#25231F" stroke="#E07A5F" stroke-width="1.2"/>
+    <ellipse cx="135" cy="80" rx="14" ry="24" fill="#161513" stroke="#C86D51" stroke-width="1.5"/>
+    
+    <!-- Motor Right -->
+    <rect x="250" y="55" width="35" height="20" rx="3" fill="#25231F" stroke="#E07A5F" stroke-width="1.2"/>
+    <ellipse cx="295" cy="65" rx="14" ry="24" fill="#161513" stroke="#C86D51" stroke-width="1.5"/>
+    
+    <!-- Rear Caster -->
+    <circle cx="410" cy="45" r="8" fill="#E5B074" stroke="#FFF" stroke-width="1"/>
+
+    <text x="180" y="110" font-family="'Space Grotesk', monospace" font-size="8" fill="#C86D51">PART 12-17: DUAL DC GEARMOTORS, 90mm WHEELS, REAR BALL CASTER</text>
+  </g>
+
+  <!-- Exploded Dotted Alignment Axes -->
+  <g stroke="rgba(224, 122, 95, 0.4)" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="200" y1="80" x2="200" y2="280"/>
+    <line x1="360" y1="70" x2="360" y2="270"/>
+    <line x1="470" y1="75" x2="470" y2="275"/>
+  </g>
+</svg>

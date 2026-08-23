@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#FBF9F5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
-    <title>Over-Terrain Autonomous Vehicle | Aidan Law</title>
+    <title>Autonomous Over-Terrain Vehicle (OTV) &amp; Specimen Classifier | Aidan Law</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,48 +42,404 @@
                 <span class="telemetry-dot"></span>
                 SPECIFICATION // SPEC-01
             </div>
-            <h1>Over-Terrain Autonomous Vehicle</h1>
-            <p class="project-hero-subtitle">1st Place Award Winner • Arduino Integration • SolidWorks Hardware Design</p>
+            <h1>Autonomous Over-Terrain Vehicle (OTV) &amp; Specimen Classifier</h1>
+            <p class="project-hero-subtitle">First-principles autonomous robotics, rapid mechanical prototyping, and deterministic C++ state-machine control.</p>
         </div>
     </header>
 
     <!-- Project Details -->
     <article class="project-details section container fade-in-up">
+        <!-- Hero Main Assembly Showcase -->
+        <div class="project-hero-media">
+            <div class="hero-media-card">
+                <span class="cad-crosshair top-left">+</span>
+                <span class="cad-crosshair top-right">+</span>
+                <span class="cad-crosshair bottom-left">+</span>
+                <span class="cad-crosshair bottom-right">+</span>
+                
+                <div class="hero-media-wrapper">
+                    <img src="assets/otv/otv-cad-assembly-transparent.png" alt="Complete SolidWorks Autonomous Over-Terrain Vehicle CAD Model" class="hero-media-img" loading="eager">
+                </div>
+                
+                <div class="hero-media-caption">
+                    <div class="hero-caption-left">
+                        <div class="telemetry-badge" style="margin-bottom: 0;">
+                            <span class="telemetry-dot"></span>
+                            PARAMETRIC CAD // AUTONOMOUS OVER-TERRAIN VEHICLE
+                        </div>
+                        <span class="coord-stamp">SOLIDWORKS // 3D DIGITAL PROTOTYPE</span>
+                    </div>
+                    <div class="hero-caption-specs">
+                        <span class="tag-chip">[1.09 kg Mass]</span>
+                        <span class="tag-chip">[1st Place (120/100)]</span>
+                        <span class="tag-chip">[11.90 cm/s Speed]</span>
+                        <span class="tag-chip">[~$260 BOM]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Stats Ribbon -->
+        <div class="project-stats-ribbon">
+            <span class="cad-crosshair top-left">+</span>
+            <span class="cad-crosshair bottom-right">+</span>
+            <div class="project-stat-item">
+                <span class="project-stat-label"><i class="fas fa-trophy" style="color: var(--accent-copper);"></i> Competition Result</span>
+                <span class="project-stat-val">1st Place Overall</span>
+                <span class="project-stat-sub">120 / 100 Total Score</span>
+            </div>
+            <div class="project-stat-item">
+                <span class="project-stat-label"><i class="fas fa-weight-hanging"></i> Total Assembly Mass</span>
+                <span class="project-stat-val">1.09 kg</span>
+                <span class="project-stat-sub">14.04" × 6.83" Chassis</span>
+            </div>
+            <div class="project-stat-item">
+                <span class="project-stat-label"><i class="fas fa-tachometer-alt"></i> Operating Speed</span>
+                <span class="project-stat-val">11.90 cm/s</span>
+                <span class="project-stat-sub">25.25 RPM at Wheels</span>
+            </div>
+            <div class="project-stat-item">
+                <span class="project-stat-label"><i class="fas fa-dollar-sign"></i> Total BOM Cost</span>
+                <span class="project-stat-val">~$260</span>
+                <span class="project-stat-sub">$320 Budget Ceiling</span>
+            </div>
+            <div class="project-stat-item">
+                <span class="project-stat-label"><i class="fas fa-battery-full"></i> Battery Runtime</span>
+                <span class="project-stat-val">~402 min</span>
+                <span class="project-stat-sub">12V 2000 mAh NiMH Pack</span>
+            </div>
+        </div>
+
         <div class="project-grid-2col">
             <div class="project-text">
-                <h2>Project Overview</h2>
+                <h2>Project Summary &amp; Mission Constraints</h2>
                 <p>
-                    This project involved the end-to-end design, fabrication, and programming of an autonomous vehicle capable of traversing rugged, unpredictable terrain. As the lead mechanical designer, I was tasked with engineering a robust chassis that maintains structural integrity while minimizing mass. The goal was to seamlessly integrate complex mechatronic subsystems into a cohesive, highly functional prototype. 
+                    In a rigorous 12-week design and fabrication cycle for the University of Maryland ENES100 robotics competition, our 8-person interdisciplinary engineering team designed, modeled, and manufactured an autonomous ground vehicle from scratch. 
                 </p>
                 <p>
-                    The design process required a deep understanding of dynamic loads and vibrational analysis. We leveraged iterative prototyping and finite element analysis (FEA) to ensure that the suspension and drivetrain could withstand high impact forces without catastrophic failure. This rigorous approach fundamentally changed our perspective on iterative mechanical design, highlighting the intersection between physical constraints and computational capabilities.
+                    The mission required the vehicle to autonomously deploy from an unmapped, randomized starting coordinate, navigate a multi-obstacle terrain arena, locate and capture an unknown foreign specimen, measure its mass, and classify its material composition (compressible foam vs. rigid plastic) within a strict 5-minute operational window with zero human intervention.
                 </p>
                 <p>
-                    Furthermore, the electrical architecture had to be meticulously planned to avoid interference with the mechanical systems. Custom PCB mounts and flexible wiring harnesses were designed directly within the SolidWorks environment to guarantee optimal spatial efficiency and maintain an elegant internal layout.
+                    By grounding every design choice in first-principles engineering—from free-body kinematic torque derivations to simplified overhead optical tracking and deterministic state machine firmware—the vehicle completed all competition mission objectives with a perfect 120/100 score, securing 1st place overall out of 40+ engineering teams.
                 </p>
                 
                 <h2>Key Contributions</h2>
                 <ul class="apple-list">
-                    <li>Developed custom SolidWorks mounting hardware tailored to house custom electronics.</li>
-                    <li>Integrated an Arduino microcontroller to process sensor data and command motor drivers efficiently.</li>
-                    <li>Led the team to achieve a 1st place award in the culminating engineering design competition against 40+ teams.</li>
+                    <li>Derived first-principles free-body torque equilibrium equations to select dual Pololu 12V brushed DC gearmotors (#3497), achieving an operating speed of 11.90 cm/s at 24.06 N-cm torque with a zero-radius differential pivot steering geometry.</li>
+                    <li>Designed and laser-cut a rigid, lightweight 14.04" × 6.83" acrylic chassis (1.09 kg total mass) utilizing interlocking finger tabs and a rapid-iteration passive friction scoop that achieved 100% specimen capture reliability.</li>
+                    <li>Programmed deterministic C++ finite state machine (FSM) firmware on an Arduino Uno, integrating HX711 dual half-bridge strain gauge mass sampling and tactile force deflection material identification with overhead ArUco marker tracking.</li>
+                    <li>Quantified complete lifecycle environmental metrics using Granta EduPack Eco Audit (458 MJ energy, 27.6 kg CO₂ footprint), demonstrating an end-of-life recovery credit of -29 MJ and -1.49 kg CO₂ through modular component reuse.</li>
                 </ul>
             </div>
             <div class="project-sidebar">
                 <div class="sidebar-card">
                     <span class="cad-crosshair top-left">+</span>
                     <span class="cad-crosshair top-right">+</span>
-                    <h3>Technologies & Tools</h3>
+                    <h3>Competition Result</h3>
+                    <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <span style="font-family: var(--font-sans); font-size: 1.5rem; font-weight: 700; color: var(--accent-copper);">1st Place</span>
+                        <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted);">Overall</span>
+                    </div>
+                    <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.75rem;">
+                        Achieved a 120/100 overall score against 40+ engineering teams at the University of Maryland ENES100 Competition.
+                    </p>
+                </div>
+
+                <div class="sidebar-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <h3>Vehicle Specifications</h3>
+                    <ul class="gallery-data-list" style="margin-top: 0.25rem;">
+                        <li><span>Chassis:</span> <strong>14.04" × 6.83" (3 mm Acrylic)</strong></li>
+                        <li><span>Total Mass:</span> <strong>1.09 kg</strong></li>
+                        <li><span>Drive Motors:</span> <strong>2× Pololu 12V DC (#3497)</strong></li>
+                        <li><span>Operating Speed:</span> <strong>11.90 cm/s (25.25 RPM)</strong></li>
+                        <li><span>Mass Sensor:</span> <strong>Dual Strain Gauges + HX711</strong></li>
+                        <li><span>Material Check:</span> <strong>Tactile Deflection Switch</strong></li>
+                        <li><span>Tracking System:</span> <strong>Overhead ArUco Vision</strong></li>
+                        <li><span>Power Supply:</span> <strong>12V 2000 mAh NiMH Pack</strong></li>
+                        <li><span>Total BOM:</span> <strong>~$260 ($320 Budget Cap)</strong></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <h3>Technologies &amp; Tools</h3>
                     <div class="tech-tags">
                         <span class="tag">SolidWorks</span>
-                        <span class="tag">Arduino</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Mechatronics</span>
-                        <span class="tag">FEA Analysis</span>
+                        <span class="tag">Arduino Uno</span>
+                        <span class="tag">C++ (FSM)</span>
+                        <span class="tag">Laser Cutting</span>
+                        <span class="tag">HX711 ADC</span>
+                        <span class="tag">Strain Gauges</span>
+                        <span class="tag">Pololu DC Motors</span>
+                        <span class="tag">ArUco Vision</span>
+                        <span class="tag">Granta EduPack</span>
+                        <span class="tag">Rapid Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
+                    <h3>Project Files &amp; Presentation</h3>
+                    <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.55;">
+                        Access the SolidWorks 3D CAD models, Arduino C++ firmware, electrical schematics, and final competition presentation.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                        <a href="https://drive.google.com/drive/folders/1KZ6Dbf2n0eQPBp8hfbSSW9gWEo5AgMKK?usp=drive_link" class="btn btn-secondary" target="_blank" rel="noopener" style="width: 100%; font-size: 0.8rem; padding: 0.75rem 1rem;">
+                            <i class="fab fa-google-drive" style="color: var(--accent-copper);"></i>
+                            <span>Link to Files</span>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                        </a>
+                        <a href="assets/otv/otv-final-presentation.pdf" class="btn btn-secondary" target="_blank" rel="noopener" style="width: 100%; font-size: 0.8rem; padding: 0.75rem 1rem;">
+                            <i class="fas fa-file-pdf" style="color: #e74c3c;"></i>
+                            <span>View Presentation (PDF)</span>
+                            <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Deep-Dive 1: Mechanical Design & Kinematics Modeling -->
+        <section class="project-gallery-section">
+            <div class="gallery-header">
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    MECHANICAL ENGINEERING // CHASSIS &amp; KINEMATICS
+                </div>
+                <h2>Mechanical Design &amp; Drivetrain Kinematics</h2>
+                <p>
+                    Every mechanical subsystem was engineered from first principles to balance structural rigidity, center of mass, and torque demands within a tight dimensional envelope.
+                </p>
+            </div>
+
+            <div class="gallery-grid-2col">
+                <!-- Mechanical Card 1: Chassis -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper cad-aspect" style="background: #ffffff; padding: 0.75rem;">
+                        <img src="assets/otv/otv-cad-assembly-transparent.png" alt="Autonomous Over-Terrain Vehicle 3D CAD Chassis Model" class="gallery-img" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">CHASSIS ARCHITECTURE</span>
+                            <span class="coord-stamp">3 MM LASER-CUT ACRYLIC</span>
+                        </div>
+                        <h3 class="gallery-card-title">Tabbed Chassis Architecture</h3>
+                        <p class="gallery-card-desc">
+                            Fabricated a 14.04" × 6.83" chassis from 3 mm laser-cut acrylic using tight-tolerance interlocking finger tabs and reinforced taped seams, creating a lightweight, rigid 1.09 kg unibody frame capable of sustaining continuous operational impact.
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Frame Dimensions:</span> <strong>14.04" × 6.83" (356.6 × 173.5 mm)</strong></li>
+                            <li><span>Material:</span> <strong>3 mm Extruded Acrylic Sheet</strong></li>
+                            <li><span>Joinery Technique:</span> <strong>Interlocking Tabs &amp; Taped Seams</strong></li>
+                            <li><span>Total Vehicle Mass:</span> <strong>1.09 kg (Fully Integrated)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mechanical Card 2: Drivetrain & Kinematic Curves -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper cad-aspect" style="background: #ffffff; padding: 0.75rem;">
+                        <img src="assets/otv/otv-motor-curve.png" alt="Motor Torque, Speed, Power, and Current Kinematic Curves" class="gallery-img" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">DRIVETRAIN KINEMATICS</span>
+                            <span class="coord-stamp">MOTOR CHARACTERISTIC CURVES</span>
+                        </div>
+                        <h3 class="gallery-card-title">Torque &amp; Speed Kinematic Modeling</h3>
+                        <p class="gallery-card-desc">
+                            Derived free-body equilibrium equations to calculate required motor torque under rolling friction and ramp inclines, selecting dual Pololu 12V brushed DC gearmotors (#3497) paired with 90 mm rubber wheels and a rear ball caster for zero-radius differential pivot steering.
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Drive Motors:</span> <strong>2× Pololu 12V Brushed DC (#3497)</strong></li>
+                            <li><span>Operating Torque:</span> <strong>0.1146 kg·mm (24.06 N-cm at Gearbox)</strong></li>
+                            <li><span>Operating Speed:</span> <strong>13.987 RPM (11.90 cm/s Ground Speed)</strong></li>
+                            <li><span>Peak Motor Power:</span> <strong>0.449 W (at 65 kg·mm Torque)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep-Dive 2: Embedded Electronics & Firmware -->
+        <section class="project-gallery-section">
+            <div class="gallery-header">
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    EMBEDDED SYSTEMS // C++ STATE-MACHINE FIRMWARE
+                </div>
+                <h2>Embedded Electronics &amp; Sensor Subsystems</h2>
+                <p>
+                    Deterministic C++ control logic and custom sensor circuits eliminated runtime fragility while ensuring real-time specimen mass sampling and material classification.
+                </p>
+            </div>
+
+            <div class="gallery-grid-2col">
+                <!-- Firmware Card 1: FSM & Pin Allocation Code -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper fea-aspect" style="background: #21272b; padding: 0.5rem;">
+                        <img src="assets/otv/otv-firmware-code.png" alt="Arduino C++ Firmware Pin Allocations and Libraries" class="gallery-img" style="border-radius: 4px;" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">CONTROL LOGIC</span>
+                            <span class="coord-stamp">ARDUINO C++ FIRMWARE</span>
+                        </div>
+                        <h3 class="gallery-card-title">Deterministic C++ Finite State Machine</h3>
+                        <p class="gallery-card-desc">
+                            Structured deterministic control logic on an Arduino Uno executing a sequential state machine (<code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">Localize</code> &rarr; <code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">Wall-Hugging Drive</code> &rarr; <code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">Ramp Capture</code> &rarr; <code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">Tactile Density Check</code> &rarr; <code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">HX711 Weight Sampling</code> &rarr; <code style="font-family: var(--font-mono); font-size: 0.8rem; background: var(--bg-linen); padding: 0.15rem 0.35rem; border-radius: 4px;">Return</code>).
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Microcontroller:</span> <strong>Arduino Uno (ATmega328P)</strong></li>
+                            <li><span>Libraries:</span> <strong>HX711_ADC, Enes100, EEPROM</strong></li>
+                            <li><span>Global Tracking:</span> <strong>Overhead ArUco Vision ("Eye in the Sky")</strong></li>
+                            <li><span>Trajectory Routine:</span> <strong>Pre-Programmed Wall-Hugging Paths</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Firmware Card 2: Sensors & Circuit Schematic -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper fea-aspect" style="background: #ffffff; padding: 0.75rem;">
+                        <img src="assets/otv/otv-schematic.png" alt="Autonomous Over-Terrain Vehicle Circuit Schematic Diagram" class="gallery-img" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">CIRCUIT SCHEMATIC</span>
+                            <span class="coord-stamp">MASS &amp; MATERIAL SENSORS</span>
+                        </div>
+                        <h3 class="gallery-card-title">Circuit Schematic &amp; Sensor Wiring</h3>
+                        <p class="gallery-card-desc">
+                            Complete electrical schematic detailing the Arduino Uno pinout interfacing the L298N dual H-bridge motor driver, 12V power distribution with master switch SW1, HX711 strain gauge amplifier, ESP8266 Wi-Fi module, and tactile push-button classification switch.
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Mass Subsystem:</span> <strong>Dual Half-Bridge Gauges + HX711 ADC</strong></li>
+                            <li><span>Material Classifier:</span> <strong>Tactile Deflection Switch (10 Ω Pull-Down)</strong></li>
+                            <li><span>Motor Driver:</span> <strong>L298N Dual H-Bridge (Pins 5, 6, 7, 8, 9, 10)</strong></li>
+                            <li><span>Power Rail:</span> <strong>12V 2000 mAh NiMH Pack + SW1 Switch</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep-Dive 3 & 4: Friction Ramp Pivot & Eco Audit -->
+        <section class="project-gallery-section">
+            <div class="gallery-header">
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    PROBLEM SOLVING // SUSTAINABILITY &amp; DFM
+                </div>
+                <h2>Problem Solving &amp; Lifecycle Sustainability</h2>
+                <p>
+                    Iterative mechanical problem-solving eliminated complex active linkages, while quantitative eco-audits evaluated the environmental lifecycle footprint.
+                </p>
+            </div>
+
+            <div class="gallery-grid-2col">
+                <!-- Friction Ramp Pivot -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper photo-aspect">
+                        <img src="assets/otv/otv-physical-prototype.jpg" alt="Physical Autonomous Over-Terrain Vehicle with Passive Friction Ramp" class="gallery-img" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">RAPID DFM INNOVATION</span>
+                            <span class="coord-stamp">PASSIVE MECHANISM</span>
+                        </div>
+                        <h3 class="gallery-card-title">The Friction Ramp Pivot</h3>
+                        <p class="gallery-card-desc">
+                            Initial multi-linkage motorized grabbers proved overly complex and prone to binding, while early 3D-printed ramp angles were too steep and snagged on the arena floor's Velcro seam. We replaced active servos with a passive friction scoop, extending the ramp with a flexible recycled plastic lip and popsicle-stick base support to shallow the entry angle—achieving 100% capture reliability without a 12-hour reprint delay.
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Initial Challenge:</span> <strong>Active Grabber Complexity &amp; Ramp Snags</strong></li>
+                            <li><span>Engineering Solution:</span> <strong>Passive Friction Scoop + Flexible Lip</strong></li>
+                            <li><span>Capture Reliability:</span> <strong>100% Capture Success Rate</strong></li>
+                            <li><span>Turnaround Time:</span> <strong>Zero-Downtime Rapid Prototyping</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Granta Eco Audit -->
+                <div class="gallery-card">
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
+                    <div class="gallery-img-wrapper fea-aspect" style="background: #ffffff; padding: 0.75rem;">
+                        <img src="assets/otv/otv-eco-audit.png" alt="Granta EduPack Eco Audit Life Phase Relative Contribution Chart" class="gallery-img" loading="lazy">
+                    </div>
+                    <div class="gallery-card-content">
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">SUSTAINABILITY AUDIT</span>
+                            <span class="coord-stamp">GRANTA EDUPACK</span>
+                        </div>
+                        <h3 class="gallery-card-title">Granta EduPack Eco Audit</h3>
+                        <p class="gallery-card-desc">
+                            Quantified total lifecycle environmental impact using Granta EduPack Eco Audit, evaluating material extraction, manufacturing, transportation, usage, and disposal. Demonstrating that modular component reuse (motors, microcontroller, wheel hubs, battery) yielded an end-of-life recovery credit of -29 MJ energy and -1.49 kg CO₂.
+                        </p>
+                        <ul class="gallery-data-list">
+                            <li><span>Total Energy Demand:</span> <strong>458 MJ (Full Lifecycle)</strong></li>
+                            <li><span>Carbon Footprint:</span> <strong>27.6 kg CO₂ Equivalent</strong></li>
+                            <li><span>End-of-Life Recovery:</span> <strong>-29.0 MJ Energy &amp; -1.49 kg CO₂</strong></li>
+                            <li><span>Circular Design:</span> <strong>Modular Reuse of High-Energy Hardware</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team & Competition Collaboration Showcase -->
+        <section class="project-gallery-section">
+            <div class="gallery-header">
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    TEAM COLLABORATION // UMD ENES100 COMPETITION
+                </div>
+                <h2>Engineering Team &amp; Lab Prototyping</h2>
+                <p>
+                    Collaborated across mechanical design, circuit layout, firmware development, and testing within an 8-person interdisciplinary team to secure 1st place overall.
+                </p>
+            </div>
+
+            <div class="hero-media-card" style="margin-top: 1.5rem;">
+                <span class="cad-crosshair top-left">+</span>
+                <span class="cad-crosshair top-right">+</span>
+                <span class="cad-crosshair bottom-left">+</span>
+                <span class="cad-crosshair bottom-right">+</span>
+                
+                <div class="hero-media-wrapper" style="height: auto; max-height: 520px; padding: 0; background: var(--bg-card);">
+                    <img src="assets/otv/otv-team.jpg" alt="University of Maryland ENES100 8-Person Autonomous Vehicle Engineering Team in Makerspace" class="gallery-img" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius-sm);" loading="lazy">
+                </div>
+                
+                <div class="hero-media-caption">
+                    <div class="hero-caption-left">
+                        <div class="telemetry-badge" style="margin-bottom: 0;">
+                            <span class="telemetry-dot"></span>
+                            1ST PLACE OVERALL // 120/100 SCORE
+                        </div>
+                        <span class="coord-stamp">UNIVERSITY OF MARYLAND // RAPID PROTOTYPING LAB</span>
+                    </div>
+                    <div class="hero-caption-specs">
+                        <span class="tag-chip">[8-Person Interdisciplinary Team]</span>
+                        <span class="tag-chip">[40+ Competing Teams]</span>
+                        <span class="tag-chip">[12-Week Design Cycle]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <div class="section-divider"></div>
 
@@ -92,8 +448,14 @@
                 <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
                 <span>Back to Projects</span>
             </a>
-            <a href="https://github.com/ajlaw810" class="btn btn-secondary" target="_blank" rel="noopener">
-                <span>View CAD & Code Repo</span>
+            <a href="assets/otv/otv-final-presentation.pdf" class="btn btn-secondary" target="_blank" rel="noopener">
+                <i class="fas fa-file-pdf" style="font-size: 0.95rem; color: #e74c3c;"></i>
+                <span>View Presentation (PDF)</span>
+                <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1KZ6Dbf2n0eQPBp8hfbSSW9gWEo5AgMKK?usp=drive_link" class="btn btn-secondary" target="_blank" rel="noopener">
+                <i class="fab fa-google-drive" style="font-size: 0.95rem; color: var(--accent-copper);"></i>
+                <span>Link to Files</span>
                 <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
             </a>
         </div>
