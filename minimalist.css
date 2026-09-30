@@ -184,3 +184,15 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
   .hero { padding-top: 92px; }
   .contact-circular-row { flex-wrap: wrap; gap: .65rem; }
 }
+
+/* Fit the mobile viewport and contain sideways gestures at the page boundary. */
+@media (max-width: 768px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  @supports (overflow: clip) { html, body { overflow-x: clip; } }
+  html { overscroll-behavior-x: none; }
+  .container, .hero-grid, .projects-grid, .experience-grid,
+  .project-grid-2col, .gallery-grid-3col { min-width: 0; max-width: 100%; }
+  .project-card, .experience-card, .gallery-card, .sidebar-card { max-width: 100%; }
+  img, video, iframe, canvas, svg { max-width: 100%; }
+  h1, h2, h3, p, li, a { overflow-wrap: anywhere; }
+}
