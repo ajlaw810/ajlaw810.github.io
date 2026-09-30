@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Gentle, one-time entrances. Content stays visible if motion is disabled or JS fails.
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.animate([
+                    { opacity: 0.55, transform: 'translateY(12px)' },
+                    { opacity: 1, transform: 'translateY(0)' }
+                ], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+                obs.unobserve(entry.target);
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll(
+            '.hero-editorial, .project-hero-content, .projects-header, .project-card, .experience-card, .gallery-header'
+        ).forEach(element => observer.observe(element));
+    }
+
     // ─── 1. SMOOTH SCROLL FOR ANCHOR LINKS ─────────────────────────────────
     const anchors = document.querySelectorAll('a[href^="#"]');
     if (anchors.length > 0) {
@@ -10,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     e.preventDefault();
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    targetElement.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth' });
                 }
             });
         });

@@ -27,7 +27,7 @@
   
   /* Glassmorphism & Tactile Depth */
   --glass-bg: rgba(251, 249, 245, 0.90);
-  --shadow-tactile: 0 4px 16px rgba(28, 27, 24, 0.04), 0 1px 3px rgba(28, 27, 24, 0.02);
+  --shadow-tactile: 0 8px 24px -8px rgba(28, 27, 24, 0.10), 0 2px 5px rgba(28, 27, 24, 0.03);
   --shadow-hover: 0 14px 36px -6px rgba(28, 27, 24, 0.09), 0 4px 12px rgba(200, 109, 81, 0.12);
 
   /* Typography */
@@ -107,11 +107,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow-x: hidden;
+  background-image:
+    linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Tactile Paper Grain Overlay */
-
-/* Architectural CAD Grid Layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.018;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
 
 /* ─── TYPOGRAPHY ─────────────────────────────────────────────────────────── */
 h1,
@@ -331,6 +342,9 @@ a:hover {
   position: relative;
   display: flex;
   align-items: center;
+  background-image:
+    radial-gradient(ellipse at 32% 20%, var(--accent-sand-light), transparent 65%),
+    radial-gradient(ellipse at 80% 75%, var(--accent-copper-light), transparent 60%);
 }
 
 .hero-grid {
@@ -417,7 +431,7 @@ a:hover {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
   border-color: var(--border-strong);
 }
@@ -445,7 +459,7 @@ a:hover {
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
 
 .project-info {
@@ -1499,3 +1513,21 @@ a:hover {
 
 .benchmark-img { display: block; width: 100%; height: auto; }
 #benchmark-title { margin-top: 1rem; }
+
+/* Motion stays brief and optional, including the existing hover effects. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .project-card:hover,
+  .project-card:hover .project-image,
+  .hero-media-card:hover .hero-media-img,
+  .gallery-card:hover,
+  .contact-icon-btn:hover,
+  .contact-icon-btn:hover i {
+    transform: none;
+  }
+}
