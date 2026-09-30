@@ -50,3 +50,26 @@
   .fea-page .gallery-header h2 { font-size: 1.8rem; }
   .fea-page .project-text h2 { margin-top: 2rem; }
 }
+
+/* Match the portfolio's editorial heading and body typography. */
+.fea-page .project-text h2,
+.fea-page .gallery-header h2,
+.fea-page .gallery-card-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fea-page .gallery-card-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.65rem);
+  line-height: 1.25;
+}
+.fea-page .project-text p,
+.fea-page .gallery-header p,
+.fea-page .gallery-card-desc,
+.fea-page .apple-list li {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.fea-page .project-details strong { font-weight: 600; }
