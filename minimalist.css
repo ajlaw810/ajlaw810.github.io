@@ -196,3 +196,15 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
   img, video, iframe, canvas, svg { max-width: 100%; }
   h1, h2, h3, p, li, a { overflow-wrap: anywhere; }
 }
+
+/* A lighter mobile header blends into the hero while retaining a full-size tap target. */
+@media (max-width: 768px) {
+  html { scroll-padding-top: 68px; }
+  .navbar-content, .navbar.scrolled .navbar-content { height: 56px; padding-inline: 1rem; }
+  .nav-logo { font-size: 1.2rem; }
+  .navbar:not(.scrolled):not(:has(.nav-links.active)) { background: transparent; border-bottom-color: transparent; box-shadow: none; }
+  .menu-toggle { border-color: transparent; background: transparent; }
+  .menu-toggle:focus-visible { outline: 2px solid var(--accent-copper); outline-offset: 1px; }
+  .nav-links { max-height: calc(100dvh - 56px); }
+  .hero { padding-top: 84px; }
+}
