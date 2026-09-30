@@ -78,11 +78,23 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
 .organization-logo {
   grid-column: 1; grid-row: 1 / span 3; align-self: center;
   display: flex; align-items: center; justify-content: center;
-  height: 64px; padding: 8px; background: #fff;
-  border: 1px solid var(--border-subtle); border-radius: 8px;
+  height: 64px; padding: 0; background: transparent;
+  border: 0; border-radius: 0;
 }
 .organization-logo img { display: block; max-width: 100%; height: 44px; object-fit: contain; }
-.organization-logo--payer { background: #101827; }
+.organization-logo--mw::before, .organization-logo--payer::before {
+  content: ""; display: block; width: 128px; max-width: 100%; height: 44px;
+  background: var(--text-muted);
+  mask: var(--organization-mark) center / contain no-repeat;
+  -webkit-mask: var(--organization-mark) center / contain no-repeat;
+}
+.organization-logo--mw { --organization-mark: url("assets/logos/mw-components.svg"); }
+.organization-logo--payer { --organization-mark: url("assets/logos/payer-sciences.svg"); }
+.organization-logo--mw img, .organization-logo--payer img { position: absolute; opacity: 0; }
+.organization-logo--umd img { filter: grayscale(1); mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) {
+  .organization-logo--umd img { filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+}
 .organization-logo--umd img { width: 48px; height: 48px; }
 .exp-header > .exp-subtitle { margin-bottom: 0; }
 .exp-subtitle { font-size: .82rem; }
