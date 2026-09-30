@@ -12,8 +12,7 @@
 }
 .project-page .project-text h2 { line-height: 1.25; margin: 2.5rem 0 1rem; }
 .project-page .project-text h2:first-child { margin-top: 0; }
-.project-page .project-text p,
- .project-page .gallery-header p {
+.project-page .project-text p, .project-page .gallery-header p {
   font-size: 1rem; line-height: 1.8; max-width: 70ch; margin: 0 0 1.25rem;
 }
 .project-page .apple-list { margin: 1.25rem 0 2rem; }
@@ -54,9 +53,7 @@
 
 /* Match the portfolio's editorial heading and body typography. */
 .project-page .project-text h2,
-
 .project-page .gallery-header h2,
-
 .project-page .gallery-card-title {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -67,11 +64,8 @@
   line-height: 1.25;
 }
 .project-page .project-text p,
-
 .project-page .gallery-header p,
-
 .project-page .gallery-card-desc,
-
 .project-page .apple-list li {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -84,11 +78,13 @@
 .project-page .project-gallery-section + .project-gallery-section { margin-top: 3rem; }
 .project-page .gallery-card { min-width: 0; }
 .project-page .gallery-img-wrapper { margin-bottom: 0; }
-
+.project-page .hero-media-caption { padding: 1.5rem; gap: 1rem; }
+.project-page .hero-caption-left { gap: .75rem; }
+.project-page .gallery-card-meta { margin-bottom: .25rem; }
 .project-page .gallery-data-list { margin-top: 1rem; line-height: 1.65; }
 @media (max-width: 640px) {
   .project-page .gallery-grid-3col { grid-template-columns: 1fr; gap: 1.5rem; }
-
+  .project-page .hero-media-caption { padding: 1.25rem; }
 }
 
 /* Shared caption typography wherever image cards appear on the site. */

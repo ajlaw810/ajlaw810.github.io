@@ -1,22 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Gentle, one-time entrances. Content stays visible if motion is disabled or JS fails.
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.animate([
-                    { opacity: 0.55, transform: 'translateY(12px)' },
-                    { opacity: 1, transform: 'translateY(0)' }
-                ], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
-                obs.unobserve(entry.target);
-            });
-        }, { threshold: 0.08 });
-        document.querySelectorAll(
-            '.hero-editorial, .project-hero-content, .projects-header, .project-card, .experience-card, .gallery-header'
-        ).forEach(element => observer.observe(element));
-    }
+    // Keep project cards clickable while allowing their disclosures to work independently.
+    document.querySelectorAll('article.project-card').forEach(card => {
+        card.addEventListener('click', event => {
+            if (event.target.closest('a, details, button')) return;
+            const link = card.querySelector('.project-link');
+            if (link) window.location.assign(link.href);
+        });
+    });
 
     // ─── 1. SMOOTH SCROLL FOR ANCHOR LINKS ─────────────────────────────────
     const anchors = document.querySelectorAll('a[href^="#"]');
@@ -34,7 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ─── 2. NAVBAR SCROLL ELEVATION ─────────────────────────────────────────
+    // Subtle one-time entrances; content is always readable without JavaScript.
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.animate([
+                    { opacity: 0.55, transform: 'translateY(10px)' },
+                    { opacity: 1, transform: 'translateY(0)' }
+                ], { duration: 400, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+                obs.unobserve(entry.target);
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.hero-editorial, .project-hero-content, .projects-header, .project-card, .experience-card, .gallery-header').forEach(el => observer.observe(el));
+    }
+
+    // ─── 3. NAVBAR SCROLL ELEVATION ─────────────────────────────────────────
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
@@ -46,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ─── 3. MOBILE MENU TOGGLE & AUTO-CLOSE ─────────────────────────────────
+    // ─── 4. MOBILE MENU TOGGLE & AUTO-CLOSE ─────────────────────────────────
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     if (menuToggle && navLinks) {
@@ -100,6 +107,111 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeMenu();
             }
         });
+    }
+
+    // ─── 5. EXPERIENCE CARD ACCORDION (SINGLE-OPEN BEHAVIOR) ────────────────
+    const toggleButtons = document.querySelectorAll('.card-toggle-btn');
+    if (toggleButtons.length > 0) {
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentCard = button.closest('.experience-card');
+                if (!currentCard) return;
+
+                const isAlreadyOpen = currentCard.classList.contains('open');
+
+                // Single-Open Behavior: Close all open experience cards first
+                document.querySelectorAll('.experience-card.open').forEach(card => {
+                    card.classList.remove('open');
+                    const cardBtn = card.querySelector('.card-toggle-btn');
+                    if (cardBtn) {
+                        cardBtn.setAttribute('aria-expanded', 'false');
+                        const span = cardBtn.querySelector('span') || cardBtn;
+                        span.textContent = 'Expand for more detail ↓';
+                    }
+                });
+
+                // Toggle current card if it wasn't open
+                if (!isAlreadyOpen) {
+                    currentCard.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                    const span = button.querySelector('span') || button;
+                    span.textContent = 'Show less ↑';
+                }
+            });
+        });
+    }
+
+    // ─── 6. TYPEWRITER EFFECT FOR HERO SUBTITLE ─────────────────────────────
+    const typewriterEl = document.querySelector('.typewriter-text');
+    if (typewriterEl) {
+        const words = [
+            'CAD Modeling & FEA Simulations.',
+            '3D Printing & Rapid Prototyping.',
+            'Autonomous Vehicle Integration.',
+            'Python & Data Automation.',
+            'SolidWorks & Mechanical Systems.'
+        ];
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
+
+        function type() {
+            if (!typewriterEl) return;
+            const currentWord = words[wordIndex];
+            const displayText = isDeleting
+                ? currentWord.substring(0, charIndex--)
+                : currentWord.substring(0, charIndex++);
+
+            typewriterEl.textContent = displayText;
+            let delay = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentWord.length + 1) {
+                delay = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                delay = 350;
+            }
+            setTimeout(type, delay);
+        }
+        if (reducedMotion.matches) {
+            typewriterEl.textContent = words[0];
+        } else {
+            setTimeout(type, 1000);
+        }
+    }
+
+    // ─── 7. ANIMATED STAT COUNTERS ──────────────────────────────────────────
+    const counters = document.querySelectorAll('.stat-number');
+    if (counters.length > 0) {
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'), 10);
+                    const suffix = el.getAttribute('data-suffix') || '';
+                    if (reducedMotion.matches) {
+                        el.textContent = target + suffix;
+                        obs.unobserve(el);
+                        return;
+                    }
+                    let current = 0;
+                    const duration = 1200;
+                    const stepTime = 30;
+                    const steps = duration / stepTime;
+                    const stepVal = Math.max(1, Math.ceil(target / steps));
+
+                    const timer = setInterval(() => {
+                        current = Math.min(current + stepVal, target);
+                        el.textContent = current + suffix;
+                        if (current >= target) clearInterval(timer);
+                    }, stepTime);
+
+                    obs.unobserve(el);
+                }
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(c => counterObserver.observe(c));
     }
 
 });

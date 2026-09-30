@@ -16,16 +16,17 @@
     <!-- Analytics (GoatCounter & Clicky) -->
     <script data-goatcounter="https://aidanlaw810.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <script async data-id="101509578" src="//static.getclicky.com/js"></script>
+    <link rel="stylesheet" href="minimalist.css">
 </head>
 
-<body class="project-page">
+<body class="cad-grid-bg project-page">
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-content">
             <div class="nav-brand">
                 <a href="index.html" class="nav-logo">Aidan Law</a>
-
+                <span class="nav-subtag">Mechanical Engineering</span>
             </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -40,24 +41,45 @@
     </nav>
 
     <!-- Project Hero -->
-    <header class="project-hero section">
+    <header class="project-hero section fade-in-up">
         <div class="container project-hero-content">
-
+            <div class="telemetry-badge">
+                <span class="telemetry-dot"></span>
+                SPECIFICATION // SPEC-03
+            </div>
             <h1>Drill Press Assembly & FEA</h1>
             <p class="project-hero-subtitle">30-Component SolidWorks Design • Static FEA Simulations • Technical Drafting</p>
         </div>
     </header>
 
     <!-- Project Details -->
-    <article class="project-details section container">
+    <article class="project-details section container fade-in-up">
         <!-- Hero Main Assembly Showcase -->
         <div class="project-hero-media">
             <div class="hero-media-card">
+                <span class="cad-crosshair top-left">+</span>
+                <span class="cad-crosshair top-right">+</span>
+                <span class="cad-crosshair bottom-left">+</span>
+                <span class="cad-crosshair bottom-right">+</span>
 
                 <div class="hero-media-wrapper">
                     <img src="assets/drill-press/drill-press-main.png" alt="Complete 30-Component Drill Press Assembly Digital Twin" class="hero-media-img" loading="eager">
                 </div>
 
+                <div class="hero-media-caption">
+                    <div class="hero-caption-left">
+                        <div class="telemetry-badge" style="margin-bottom: 0;">
+                            <span class="telemetry-dot"></span>
+                            DIGITAL TWIN // FULL ISOMETRIC CAD ASSEMBLY
+                        </div>
+                        <span class="coord-stamp">SOLIDWORKS // PRODUCTION READY</span>
+                    </div>
+                    <div class="hero-caption-specs">
+                        <span class="tag-chip">[30 Components]</span>
+                        <span class="tag-chip">[GD&amp;T Standards]</span>
+                        <span class="tag-chip">[500 kg Load Validated]</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -95,7 +117,8 @@
             </div>
             <div class="project-sidebar">
                 <div class="sidebar-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
                     <h3>Technologies Used</h3>
                     <div class="tech-tags">
                         <span class="tag">SolidWorks</span>
@@ -107,7 +130,8 @@
                 </div>
 
                 <div class="sidebar-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
                     <h3>Project CAD Files</h3>
                     <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.55;">
                         Access the complete SolidWorks 3D CAD models, part libraries (.SLDPRT, .SLDASM), and manufacturing drawings.
@@ -124,7 +148,10 @@
         <!-- FEA Simulation & Stress Analysis Showcase -->
         <section class="project-gallery-section">
             <div class="gallery-header">
-
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    TELEMETRY // FEA SIMULATION SUITE
+                </div>
                 <h2>FEA Simulation & Structural Analysis</h2>
                 <p>
                     Finite Element Analysis (FEA) was performed on the full digital twin under a simulated 500 kg off-axis operational load. Stress contour and resultant displacement plots validated structural safety factors and verified that deflection limits remained within tight machining tolerances.
@@ -134,12 +161,16 @@
             <div class="gallery-grid-2col">
                 <!-- FEA Plot 1: von Mises Stress -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper fea-aspect">
                         <img src="assets/drill-press/drill-press-fea-stress.png" alt="Drill Assembly Static Nodal Stress von Mises Simulation" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FEA // STRESS CONTOURS</span>
+                            <span class="coord-stamp">VON MISES</span>
+                        </div>
                         <h3 class="gallery-card-title">Static Nodal Stress Distribution</h3>
                         <p class="gallery-card-desc">
                             Evaluates stress concentrations across the head casting, support column, and table clamp under static loading. Peak stress remained well below material yield criteria.
@@ -155,12 +186,16 @@
 
                 <!-- FEA Plot 2: Displacement -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper fea-aspect">
                         <img src="assets/drill-press/drill-press-fea-displacement.png" alt="Drill Assembly Static Displacement Plot" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FEA // DEFLECTION PLOT</span>
+                            <span class="coord-stamp">URES (MM)</span>
+                        </div>
                         <h3 class="gallery-card-title">Static Resultant Displacement</h3>
                         <p class="gallery-card-desc">
                             Quantifies structural deflection along the cantilevered table plate and column axis under maximum operating feed force to ensure tool alignment repeatability.
@@ -179,7 +214,10 @@
         <!-- Component Reverse Engineering Showcase -->
         <section class="project-gallery-section">
             <div class="gallery-header">
-
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    SOLIDWORKS // 30-COMPONENT CAD BREAKDOWN
+                </div>
                 <h2>Parametric Component Modeling</h2>
                 <p>
                     Each individual casting, turned shaft, fastener, and housing component was reverse-engineered with parametric CAD features, strict geometric dimensioning, and manufacturing clearances.
@@ -189,12 +227,16 @@
             <div class="gallery-grid-3col">
                 <!-- Component 1: Handle Knob -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper cad-aspect">
                         <img src="assets/drill-press/drill-press-component-knob.png" alt="Drill Press Feed Lever Handle Knob CAD" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">SOLIDWORKS CAD</span>
+                            <span class="coord-stamp">PART-08</span>
+                        </div>
                         <h3 class="gallery-card-title">Feed Lever Handle Knob</h3>
                         <p class="gallery-card-desc">
                             Ergonomic spherical terminal knob modeled with a cylindrical threaded boss for mating with the 3-spoke manual quill feed hub assembly.
@@ -209,12 +251,16 @@
 
                 <!-- Component 2: Spindle Collar -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper cad-aspect">
                         <img src="assets/drill-press/drill-press-component-collar.png" alt="Drill Press Chuck Collar CAD" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">SOLIDWORKS CAD</span>
+                            <span class="coord-stamp">PART-14</span>
+                        </div>
                         <h3 class="gallery-card-title">Spindle Chuck Collar</h3>
                         <p class="gallery-card-desc">
                             Precision turned arbor collar featuring dual radial set-screw tapped holes and a chamfered taper for secure concentric tool clamping.
@@ -229,12 +275,16 @@
 
                 <!-- Component 3: Motor Mount Bracket -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper cad-aspect">
                         <img src="assets/drill-press/drill-press-component-bracket.png" alt="Drill Press Motor Bracket CAD" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">SOLIDWORKS CAD</span>
+                            <span class="coord-stamp">PART-29</span>
+                        </div>
                         <h3 class="gallery-card-title">Motor Mount Bracket</h3>
                         <p class="gallery-card-desc">
                             Rigid cast housing bracket with counterbored mounting holes and filleted transitions designed for motor alignment and drive belt tensioning.
@@ -266,8 +316,11 @@
 
     <!-- Footer -->
     <footer id="contact" class="footer">
-        <div class="container footer-content">
-
+        <div class="container footer-content reveal-blur">
+            <div class="telemetry-badge">
+                <span class="telemetry-dot"></span>
+                Direct Signal Channel
+            </div>
             <h2>Let's Build Something Together.</h2>
             <p>Open for mechanical engineering roles, hardware design projects, and software automation collaborations.</p>
             <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-top: -0.5rem;">
@@ -289,7 +342,7 @@
                 © 2026 Aidan Law. All rights reserved.
             </p>
             <div style="margin-top: 0.5rem;">
-
+                <a title="Privacy-friendly Web Analytics" href="https://clicky.com/101509578"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
             </div>
         </div>
     </footer>

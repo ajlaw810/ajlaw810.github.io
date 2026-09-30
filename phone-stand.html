@@ -16,16 +16,17 @@
     <!-- Analytics (GoatCounter & Clicky) -->
     <script data-goatcounter="https://aidanlaw810.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <script async data-id="101509578" src="//static.getclicky.com/js"></script>
+    <link rel="stylesheet" href="minimalist.css">
 </head>
 
-<body class="project-page">
+<body class="cad-grid-bg project-page">
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-content">
             <div class="nav-brand">
                 <a href="index.html" class="nav-logo">Aidan Law</a>
-
+                <span class="nav-subtag">Mechanical Engineering</span>
             </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -40,24 +41,46 @@
     </nav>
 
     <!-- Project Hero -->
-    <header class="project-hero section">
+    <header class="project-hero section fade-in-up">
         <div class="container project-hero-content">
-
+            <div class="telemetry-badge">
+                <span class="telemetry-dot"></span>
+                SPECIFICATION // SPEC-05
+            </div>
             <h1>Ultra-Low-Cost FDM Phone Stand &amp; FEA</h1>
             <p class="project-hero-subtitle">SolidWorks Parametric CAD • Linear Static FEA • FDM 3D Printing • Lean Value Engineering</p>
         </div>
     </header>
 
     <!-- Project Details -->
-    <article class="project-details section container">
+    <article class="project-details section container fade-in-up">
         <!-- Hero Main Assembly Showcase -->
         <div class="project-hero-media">
             <div class="hero-media-card">
+                <span class="cad-crosshair top-left">+</span>
+                <span class="cad-crosshair top-right">+</span>
+                <span class="cad-crosshair bottom-left">+</span>
+                <span class="cad-crosshair bottom-right">+</span>
 
                 <div class="hero-media-wrapper">
                     <img src="assets/phone-stand/phone-stand-cad-main.png" alt="Complete SolidWorks A-Frame Phone Stand CAD Model" class="hero-media-img" loading="eager">
                 </div>
 
+                <div class="hero-media-caption">
+                    <div class="hero-caption-left">
+                        <div class="telemetry-badge" style="margin-bottom: 0;">
+                            <span class="telemetry-dot"></span>
+                            PARAMETRIC CAD // A-FRAME PASS-THROUGH GEOMETRY
+                        </div>
+                        <span class="coord-stamp">SOLIDWORKS // FDM PLA DIGITAL PROTOTYPE</span>
+                    </div>
+                    <div class="hero-caption-specs">
+                        <span class="tag-chip">[0.04 lb / 18 g]</span>
+                        <span class="tag-chip">[Sub-$1.00 Unit Cost]</span>
+                        <span class="tag-chip">[iPhone 14 Pro Compatible]</span>
+                        <span class="tag-chip">[FOS &gt; 45]</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -83,7 +106,8 @@
             </div>
             <div class="project-sidebar">
                 <div class="sidebar-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
                     <h3>Technologies Used</h3>
                     <div class="tech-tags">
                         <span class="tag">SolidWorks</span>
@@ -96,7 +120,8 @@
                 </div>
 
                 <div class="sidebar-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair top-right">+</span>
                     <h3>Project CAD Files</h3>
                     <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.55;">
                         Access the SolidWorks 3D CAD models, slicing configurations, FEA studies, and technical manufacturing drawings.
@@ -113,7 +138,10 @@
         <!-- FEA Simulation & Stress Analysis Showcase -->
         <section class="project-gallery-section">
             <div class="gallery-header">
-
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    TELEMETRY // FEA SIMULATION SUITE
+                </div>
                 <h2>FEA Simulation & Structural Analysis</h2>
                 <p>
                     Linear static Finite Element Analysis (FEA) was conducted in SolidWorks Simulation to evaluate stress distribution and deflection under distributed downward device loads, validating structural factors of safety and geometric rigidity.
@@ -123,12 +151,16 @@
             <div class="gallery-grid-2col">
                 <!-- FEA Plot 1: von Mises Stress -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper fea-aspect">
                         <img src="assets/phone-stand/phone-stand-fea-stress.png" alt="Phone Stand Linear Static von Mises Stress Simulation" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FEA // STRESS CONTOURS</span>
+                            <span class="coord-stamp">VON MISES (N/M²)</span>
+                        </div>
                         <h3 class="gallery-card-title">Linear Static von Mises Stress</h3>
                         <p class="gallery-card-desc">
                             Evaluates localized stress concentrations under load. Stress peaks at the fillet transitions around 0.88 MPa, providing a massive safety margin against PLA yield limits (~45 MPa).
@@ -144,12 +176,16 @@
 
                 <!-- FEA Plot 2: Displacement -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper fea-aspect">
                         <img src="assets/phone-stand/phone-stand-fea-displacement.png" alt="Phone Stand Linear Static Displacement Plot" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FEA // DEFLECTION PLOT</span>
+                            <span class="coord-stamp">URES (MM)</span>
+                        </div>
                         <h3 class="gallery-card-title">Resultant Displacement (URES)</h3>
                         <p class="gallery-card-desc">
                             Quantifies structural deflection across the cantilevered support flanges and upper backrest under full device weight to guarantee rigid, wobble-free device support.
@@ -168,7 +204,10 @@
         <!-- Physical Prototype & Multi-Orientation Validation Section -->
         <section class="project-gallery-section">
             <div class="gallery-header">
-
+                <div class="telemetry-badge">
+                    <span class="telemetry-dot"></span>
+                    PHYSICAL TESTING // DUAL-ORIENTATION PROTOTYPE VALIDATION
+                </div>
                 <h2>Physical 3D-Printed Prototype Testing</h2>
                 <p>
                     Physical FDM 3D-printed iterations in PLA tested with an iPhone 14 Pro (with protective case) across both viewing orientations, validating cable pass-through accessibility and anti-tip stability.
@@ -178,12 +217,16 @@
             <div class="gallery-grid-3col">
                 <!-- Prototype 1: Standalone Manufactured Unit -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper photo-aspect">
                         <img src="assets/phone-stand/phone-stand-thumbnail.png" alt="Manufactured FDM 3D Printed Phone Stand Prototype Unit" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FDM PROTOTYPE</span>
+                            <span class="coord-stamp">PHYSICAL PART</span>
+                        </div>
                         <h3 class="gallery-card-title">FDM 3D-Printed Stand Unit</h3>
                         <p class="gallery-card-desc">
                             Manufactured prototype printed in lightweight black PLA, highlighting the A-frame geometry, open central cable routing channel, and dual support ledges.
@@ -198,12 +241,16 @@
 
                 <!-- Prototype 2: Portrait Mode -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper photo-aspect">
                         <img src="assets/phone-stand/phone-stand-physical-portrait.png" alt="Physical 3D Printed Phone Stand in Portrait Orientation with iPhone 14 Pro" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FDM PROTOTYPE</span>
+                            <span class="coord-stamp">PORTRAIT MODE</span>
+                        </div>
                         <h3 class="gallery-card-title">Portrait Setup &amp; Cable Access</h3>
                         <p class="gallery-card-desc">
                             Physical testing validating upright stability for an iPhone 14 Pro (with protective case) while maintaining continuous pass-through charging cable clearance.
@@ -218,12 +265,16 @@
 
                 <!-- Prototype 3: Landscape Mode -->
                 <div class="gallery-card">
-
+                    <span class="cad-crosshair top-left">+</span>
+                    <span class="cad-crosshair bottom-right">+</span>
                     <div class="gallery-img-wrapper photo-aspect">
                         <img src="assets/phone-stand/phone-stand-physical-landscape.png" alt="Physical 3D Printed Phone Stand in Landscape Orientation with iPhone 14 Pro" class="gallery-img" loading="lazy">
                     </div>
                     <div class="gallery-card-content">
-
+                        <div class="gallery-card-meta">
+                            <span class="project-tag-pill">FDM PROTOTYPE</span>
+                            <span class="coord-stamp">LANDSCAPE MODE</span>
+                        </div>
                         <h3 class="gallery-card-title">Landscape Media Viewing Setup</h3>
                         <p class="gallery-card-desc">
                             Demonstrates wide dual-flange ledge retention and low center-of-gravity anti-tip stability during horizontal video playback and video conferencing calls.
@@ -255,8 +306,11 @@
 
     <!-- Footer -->
     <footer id="contact" class="footer">
-        <div class="container footer-content">
-
+        <div class="container footer-content reveal-blur">
+            <div class="telemetry-badge">
+                <span class="telemetry-dot"></span>
+                Direct Signal Channel
+            </div>
             <h2>Let's Build Something Together.</h2>
             <p>Open for mechanical engineering roles, hardware design projects, and software automation collaborations.</p>
             <p style="font-family: var(--font-mono); font-size: 0.95rem; margin-top: -0.5rem;">
@@ -278,7 +332,7 @@
                 © 2026 Aidan Law. All rights reserved.
             </p>
             <div style="margin-top: 0.5rem;">
-
+                <a title="Privacy-friendly Web Analytics" href="https://clicky.com/101509578"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
             </div>
         </div>
     </footer>
