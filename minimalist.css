@@ -73,6 +73,18 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
 .project-card:hover .project-image { transform: scale(1.025); }
 .experience-card { padding: 1.5rem; }
 .exp-header { margin-bottom: .9rem; }
+.exp-header { display: grid; grid-template-columns: 140px minmax(0, 1fr); column-gap: 1.25rem; }
+.exp-header > .exp-role-meta, .exp-header > h3, .exp-header > .exp-subtitle { grid-column: 2; min-width: 0; }
+.organization-logo {
+  grid-column: 1; grid-row: 1 / span 3; align-self: center;
+  display: flex; align-items: center; justify-content: center;
+  height: 64px; padding: 8px; background: #fff;
+  border: 1px solid var(--border-subtle); border-radius: 8px;
+}
+.organization-logo img { display: block; max-width: 100%; height: 44px; object-fit: contain; }
+.organization-logo--payer { background: #101827; }
+.organization-logo--umd img { width: 48px; height: 48px; }
+.exp-header > .exp-subtitle { margin-bottom: 0; }
 .exp-subtitle { font-size: .82rem; }
 .exp-tags-bar { margin: .8rem 0 .3rem; }
 .card-toggle-btn { background: transparent; border-color: var(--border-subtle); padding: .45rem .9rem; font-size: .76rem; box-shadow: none; }
@@ -100,6 +112,7 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
   .stat-number { font-size: 1.5rem; }
   .stat-label { font-size: .56rem; }
   .project-info, .experience-card { padding: 1.25rem; }
+  .exp-header { grid-template-columns: 88px minmax(0, 1fr); column-gap: .8rem; }
   .project-info h3 { font-size: 1.4rem; }
 }
 @media (prefers-reduced-motion: reduce) {
