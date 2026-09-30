@@ -1981,4 +1981,13 @@ a:hover {
 
 
 
-
+
+/* Cantilever benchmark */
+.benchmark-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.benchmark-table { width: 100%; border-collapse: collapse; text-align: left; }
+.benchmark-table caption { text-align: left; margin-bottom: .75rem; }
+.benchmark-table th, .benchmark-table td { padding: .85rem; border-bottom: 1px solid var(--border-subtle); }
+.benchmark-table thead { background: var(--accent-warm-bg); }
+.benchmark-note { font-size: .9rem; margin-bottom: 1.5rem; }
+.benchmark-img { display: block; width: 100%; height: auto; }
+#benchmark-title { margin-top: 1rem; }

@@ -46,7 +46,7 @@
                 SPECIFICATION // SPEC-04
             </div>
             <h1>Python FEA Analysis Engine</h1>
-            <p class="project-hero-subtitle">Custom Physics Engine • Python • Numerical Structural Solvers</p>
+            <p class="project-hero-subtitle">Python / C++ • Linear Elasticity • SolidWorks Benchmark</p>
         </div>
     </header>
 
@@ -55,34 +55,13 @@
         <div class="project-grid-2col">
             <div class="project-text">
                 <h2>Project Overview</h2>
-                <p>
-                    Demonstrating a deep understanding of computational mechanics, this project involved writing a
-                    custom Finite Element Analysis (FEA) solver from absolute scratch using Python. The goal was to
-                    bridge the gap between theoretical classroom mathematics and applicable software engineering,
-                    creating a tool capable of solving complex multi-physics problems without relying on commercial
-                    "black box" software.
-                </p>
-                <p>
-                    The core engine was built to handle 1D, 2D, and eventually 3D geometries. By strictly adhering to
-                    Object-Oriented Programming (OOP) principles, the architecture allows users to easily add new
-                    element types or material models. Utilized the SciPy library to efficiently assemble and invert
-                    large, sparse stiffness matrices, drastically reducing computation time for fine meshes.
-                </p>
-                <p>
-                    To validate the solver, the output was directly benchmarked against verified results from leading
-                    CAD Software and analytical hand-calculations. Integration with Gmsh provided a robust frontend for mesh
-                    generation, allowing the tool to parse standard `.msh` files directly into the custom solver
-                    environments.
-                </p>
-
+                <p>A desktop application for linear elastic analysis of STEP CAD models, combining a Python interface with a custom C++ finite element solver. Gmsh generates quadratic, 10-node tetrahedral meshes; OpenMP accelerates assembly and Eigen handles the sparse linear solve.</p>
+                <p>The PyQt6 and PyVista interface supports face selection, constraints, distributed loads, and visualization of displacement and von Mises stress.</p>
                 <h2>Key Contributions</h2>
                 <ul class="apple-list">
-                    <li>Developed a custom Python solver utilizing NumPy and SciPy to process large sparse matrices for
-                        structural analysis.</li>
-                    <li>Integrated the application with open-source tools like Gmsh for mesh generation and OpenSees for
-                        benchmarking solver accuracy.</li>
-                    <li>Successfully translated theoretical numerical methods (Galerkin method, shape functions,
-                        stiffness matrix assembly) into highly optimized, executable code.</li>
+                    <li>Connected STEP geometry import, meshing, boundary conditions, and a custom structural solver in one desktop workflow.</li>
+                    <li>Implemented a Python/C++ workflow using nanobind, Eigen, and OpenMP.</li>
+                    <li>Benchmarked a cantilever beam against SolidWorks Simulation and analytical beam theory.</li>
                 </ul>
             </div>
             <div class="project-sidebar">
@@ -93,9 +72,10 @@
                     <div class="tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">NumPy</span>
-                        <span class="tag">SciPy</span>
+                        <span class="tag">C++ / Eigen</span>
                         <span class="tag">Gmsh</span>
-                        <span class="tag">OpenSees</span>
+                        <span class="tag">OpenMP</span>
+                        <span class="tag">PyQt6 / PyVista</span>
                     </div>
                 </div>
             </div>
@@ -103,12 +83,55 @@
 
         <div class="section-divider"></div>
 
+
+        <section class="project-gallery-section" aria-labelledby="benchmark-title">
+            <div class="gallery-header">
+                <h2 id="benchmark-title">Cantilever Beam Benchmark</h2>
+                <p>A 3,000 mm rectangular beam with a 231.853 mm width and 141.542 mm vertical depth, fixed at one end and subjected to a total 25,000 N load distributed uniformly over its full length.</p>
+                <p>The analytical comparison assumes loading in the Y direction, Young's modulus of 210 GPa, linear elasticity, and no gravity. Plain carbon steel was specified for the test; the material modulus used in each simulation still needs confirmation.</p>
+            </div>
+            <div class="benchmark-table-wrap">
+                <table class="benchmark-table">
+                    <caption>Screenshot results compared with an analytical reference</caption>
+                    <thead><tr><th scope="col">Result</th><th scope="col">Beam theory</th><th scope="col">SolidWorks</th><th scope="col">Custom FEA tool</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Maximum displacement</th><td>7.333 mm</td><td>7.311 mm</td><td>7.662 mm</td></tr>
+                        <tr><th scope="row">Difference from theory</th><td>Reference</td><td>−0.31%</td><td>+4.48%</td></tr>
+                        <tr><th scope="row">Nominal bending stress / FEA peak von Mises</th><td>48.439 MPa</td><td>52.42 MPa</td><td>46.53 MPa</td></tr>
+                        <tr><th scope="row">Difference from nominal stress</th><td>Reference</td><td>+8.22%</td><td>−3.94%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="benchmark-note">Analytical reference: I = bh³/12 = 5.47885 × 10⁻⁵ m⁴; tip deflection = FL³/(8EI); fixed-end moment = FL/2 = 37,500 N·m; nominal outer-fiber stress = M(h/2)/I. An approximate shear correction increases predicted displacement to 7.350 mm.</p>
+            <h3>What the comparison shows</h3>
+            <p>Both solvers reproduce the expected displacement increase toward the free end and stress concentration near the fixed end. At the assumed 210 GPa modulus, SolidWorks is closer to the analytical displacement. The custom tool's peak stress is closer to nominal beam bending stress, but local three-dimensional clamp stresses make this an incomplete measure of stress accuracy.</p>
+            <p>This is an initial benchmark, with mesh convergence and matching material/load settings still to be verified. Modulus matters: at 200 GPa, the analytical bending deflection becomes 7.700 mm. SolidWorks displays deformation at 41.0567×; the custom tool's display scale is unspecified, and each stress plot uses its own color range.</p>
+            <div class="gallery-grid-2col">
+                <figure class="gallery-card">
+                    <a href="assets/fea-benchmark/solidworks-displacement.png"><img src="assets/fea-benchmark/solidworks-displacement.png" alt="SolidWorks displacement contour plot of the cantilever beam" class="benchmark-img" loading="lazy"></a>
+                    <figcaption class="gallery-card-content"><h3 class="gallery-card-title">SolidWorks displacement</h3><p class="gallery-card-desc">Maximum resultant displacement: 7.311 mm.</p></figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <a href="assets/fea-benchmark/tool-displacement.png"><img src="assets/fea-benchmark/tool-displacement.png" alt="Custom tool displacement contour plot of the cantilever beam" class="benchmark-img" loading="lazy"></a>
+                    <figcaption class="gallery-card-content"><h3 class="gallery-card-title">Custom tool displacement</h3><p class="gallery-card-desc">Maximum displacement magnitude: 7.662 mm.</p></figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <a href="assets/fea-benchmark/solidworks-stress.png"><img src="assets/fea-benchmark/solidworks-stress.png" alt="SolidWorks von Mises stress contour plot of the cantilever beam" class="benchmark-img" loading="lazy"></a>
+                    <figcaption class="gallery-card-content"><h3 class="gallery-card-title">SolidWorks von Mises stress</h3><p class="gallery-card-desc">Maximum: 52.42 MPa, converted from 5.242 × 10⁷ N/m².</p></figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <a href="assets/fea-benchmark/tool-stress.png"><img src="assets/fea-benchmark/tool-stress.png" alt="Custom tool von Mises stress contour plot of the cantilever beam" class="benchmark-img" loading="lazy"></a>
+                    <figcaption class="gallery-card-content"><h3 class="gallery-card-title">Custom tool von Mises stress</h3><p class="gallery-card-desc">Maximum: 46.53 MPa.</p></figcaption>
+                </figure>
+            </div>
+        </section>
+
         <div class="project-actions">
             <a href="index.html#projects" class="btn btn-primary">
                 <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
                 <span>Back to Projects</span>
             </a>
-            <a href="https://github.com/ajlaw810" class="btn btn-secondary" target="_blank" rel="noopener">
+            <a href="https://github.com/ajlaw810/Python-FEAToolv2" class="btn btn-secondary" target="_blank" rel="noopener">
                 <span>View Solver Repository</span>
                 <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
             </a>
