@@ -91,9 +91,9 @@ summary:focus-visible, .project-link:focus-visible { outline: 2px solid var(--ac
 .organization-logo--mw { --organization-mark: url("assets/logos/mw-symbol.svg"); }
 .organization-logo--payer { --organization-mark: url("assets/logos/payer-symbol.png"); }
 .organization-logo--mw img, .organization-logo--payer img { position: absolute; opacity: 0; }
-.organization-logo--umd img { filter: grayscale(1) contrast(3); mix-blend-mode: multiply; clip-path: circle(49%); }
+.organization-logo--umd img { filter: grayscale(1); mix-blend-mode: multiply; }
 @media (prefers-color-scheme: dark) {
-  .organization-logo--umd img { filter: grayscale(1) contrast(3) invert(1); mix-blend-mode: screen; }
+  .organization-logo--umd img { filter: grayscale(1) invert(1); mix-blend-mode: screen; }
 }
 .organization-logo--umd img { width: 28px; height: 28px; }
 .exp-header > .exp-subtitle { margin-bottom: 0; }
