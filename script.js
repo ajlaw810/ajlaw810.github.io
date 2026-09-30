@@ -57,10 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     if (menuToggle && navLinks) {
+        menuToggle.setAttribute('aria-controls', 'primary-navigation');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.id = 'primary-navigation';
+        navLinks.inert = window.innerWidth <= 768;
         const openMenu = () => {
             navLinks.classList.add('active');
             menuToggle.setAttribute('aria-expanded', 'true');
-            document.body.style.overflow = 'hidden';
+            menuToggle.setAttribute('aria-label', 'Close navigation');
+            navLinks.inert = false;
             const icon = menuToggle.querySelector('i');
             if (icon) {
                 icon.classList.remove('fa-bars');
@@ -71,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeMenu = () => {
             navLinks.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
+            menuToggle.setAttribute('aria-label', 'Toggle navigation');
+            navLinks.inert = window.innerWidth <= 768;
             const icon = menuToggle.querySelector('i');
             if (icon) {
                 icon.classList.remove('fa-times');
@@ -98,14 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navLinks.classList.contains('active')) {
                 closeMenu();
+                menuToggle.focus();
             }
         });
 
-        // Reset scroll lock on resize to desktop
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) closeMenu();
+        });
+
+        // Keep hidden mobile links out of the keyboard focus order.
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
+            if (window.innerWidth > 768) closeMenu();
+            navLinks.inert = window.innerWidth <= 768 && !navLinks.classList.contains('active');
         });
     }
 
