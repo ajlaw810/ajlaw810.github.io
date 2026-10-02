@@ -93,3 +93,25 @@
   font-size: clamp(1.4rem, 2.2vw, 1.65rem); line-height: 1.25;
 }
 .gallery-card-desc { font-family: var(--font-sans); font-size: 1rem; line-height: 1.7; }
+
+/* Separate the source links from the technology tags without oversized link gaps. */
+.project-page .project-code-links { margin-top: 1.75rem; }
+.project-page .project-code-links h3 { margin-bottom: .75rem; }
+.project-page .project-code-links p { margin: 0; }
+.project-page .project-code-links .project-link {
+  display: flex; align-items: center; min-height: 44px;
+}
+
+/* Keep the mobile sidebar order; balance the longer vehicle sidebar on desktop. */
+.otv-sidebar-details { display: contents; }
+@media (min-width: 851px) {
+  .project-page .otv-overview { row-gap: 2rem; margin-bottom: 2.5rem; }
+  .project-page .otv-overview > .project-sidebar { display: contents; position: static; }
+  .project-page .otv-sidebar-details {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    grid-column: 2; grid-row: 1;
+  }
+  .project-page .otv-resources { grid-column: 1 / -1; }
+  .project-page .otv-resources > div { flex-direction: row !important; }
+  .project-page .otv-resources .btn { flex: 1; }
+}
