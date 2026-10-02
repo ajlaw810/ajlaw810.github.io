@@ -48,15 +48,15 @@
                 SPECIFICATION // SPEC-02
             </div>
             <h1>Drone Rotor Blade Optimization</h1>
-            <p class="project-hero-subtitle">MATLAB Numerical Analysis • SolidWorks Parametric CAD • BEM Theory • Aerodynamic Efficiency</p>
+            <p class="project-hero-subtitle">MATLAB Numerical Analysis • SolidWorks Parametric CAD • BEMT Trade Study • Predicted Thrust &amp; Shaft Power</p>
         </div>
     </header>
 
     <!-- Project Details -->
     <article class="project-details section container fade-in-up">
         <figure class="gallery-card">
-            <a href="assets/drone-bemt-trade-study.png" target="_blank" rel="noopener" aria-label="Open BEMT rotor trade study chart at full resolution">
-                <img src="assets/drone-bemt-trade-study.png" alt="BEMT trade study for a 7.5-inch UAV rotor at 8,500 RPM, comparing chord schedules, spanwise angle of attack, sectional thrust, and hover thrust and shaft power for baseline, bullnose, and elliptical designs" class="benchmark-img" width="1777" height="1086" loading="eager">
+            <a href="assets/drone-bemt-trade-study.png?v=bemt20261002" target="_blank" rel="noopener" aria-label="Open BEMT rotor trade study chart at full resolution">
+                <img src="assets/drone-bemt-trade-study.png?v=bemt20261002" alt="BEMT trade study for a 7.5-inch UAV rotor at 8,500 RPM, comparing chord schedules, spanwise angle of attack, sectional thrust, and hover thrust and shaft power for baseline, bullnose, and elliptical designs" class="benchmark-img" width="1794" height="1120" loading="eager">
             </a>
             <figcaption class="gallery-card-content">
                 <h3 class="gallery-card-title">BEMT Rotor Trade Study</h3>
@@ -67,22 +67,24 @@
         <div class="project-grid-2col">
             <div class="project-text">
                 <h2>Project Overview</h2>
-                <p>
-                    This project focused on the aerodynamic modeling, numerical analysis, and CAD synthesis of optimal rotor blade geometries for multirotor drone systems. By combining numerical mathematical computing in MATLAB with parametric 3D CAD modeling in SolidWorks, the goal was to maximize static thrust generation and lift-to-drag efficiency while reducing acoustic turbulence.
-                </p>
-                <p>
-                    Custom MATLAB algorithms were developed to implement Blade Element Momentum (BEM) theory. The mathematical solver evaluated local angle-of-attack distributions, lift/drag coefficients along discretized blade segments, and optimal chord length tapers from root to tip. The algorithm iteratively calculated pitch twist distribution angles to maintain uniform aerodynamic loading across high-RPM operating conditions.
-                </p>
-                <p>
-                    The resulting mathematical coordinates were imported into SolidWorks using parametric equation curves and lofted airfoil cross-sections. Structural stress analysis and centrifugal load simulations were performed to validate material integrity at peak operational velocity, resulting in a high-efficiency propeller design ready for rapid prototyping.
-                </p>
-
+                <p>I developed a MATLAB Blade Element Momentum Theory (BEMT) solver to compare five blade configurations for a two-bladed, 7.5-inch UAV propeller. The study evaluates how chord distribution, pitch, and camber affect thrust and shaft power at an 8,500 RPM design point, against a 170 grams-force hover target per motor.</p>
+                <p>The solver uses 30 radial elements, interpolated chord schedules, iterative inflow calculations, Prandtl tip and hub loss corrections, and a simplified stall model. It integrates sectional forces into total thrust and torque, then calculates shaft power and hover figure of merit.</p>
                 <h2>Key Contributions</h2>
                 <ul class="apple-list">
-                    <li>Formulated custom MATLAB computational scripts implementing Blade Element Momentum (BEM) theory to optimize blade pitch twist and chord taper distributions.</li>
-                    <li>Modeled high-efficiency 3D rotor geometry in SolidWorks by lofting mathematical airfoil cross-sections from generated coordinate point clouds.</li>
-                    <li>Conducted stress and centrifugal force simulations to ensure mechanical durability and dynamic balance under high-RPM operating loads.</li>
+                    <li>Built a reusable BEMT solver and compared baseline, aggressive and efficient bullnose, and aggressive and efficient elliptical configurations.</li>
+                    <li>Visualized chord schedules, spanwise angle of attack, sectional thrust, and the thrust-versus-power tradeoff in a four-panel dashboard.</li>
+                    <li>Evaluated predicted performance at 8,500 RPM and an assumed 16,000 RPM ceiling, with numerical results available alongside the source code.</li>
                 </ul>
+                <h2>Predicted Performance at 8,500 RPM</h2>
+                <p>All five configurations exceed the 170 grams-force target in this model. The efficient bullnose produces the most thrust; the efficient elliptical uses the least shaft power and delivers the most thrust per watt among the configurations tested.</p>
+                <ul class="apple-list">
+                    <li><strong>Baseline:</strong> 273.1 grams-force thrust at 54.48 W shaft power; figure of merit 0.304.</li>
+                    <li><strong>Bullnose aggressive:</strong> 404.2 grams-force thrust at 101.29 W shaft power; figure of merit 0.295.</li>
+                    <li><strong>Bullnose efficient:</strong> 609.3 grams-force thrust at 60.59 W shaft power; figure of merit 0.912.</li>
+                    <li><strong>Elliptical aggressive:</strong> 296.6 grams-force thrust at 68.75 W shaft power; figure of merit 0.273.</li>
+                    <li><strong>Elliptical efficient:</strong> 441.8 grams-force thrust at 39.03 W shaft power; figure of merit 0.874.</li>
+                </ul>
+                <p>These are numerical predictions using simplified airfoil polars and a stall model, rather than measured flight or bench-test results. Shaft power excludes motor and ESC losses. The 16,000 RPM cases assume that speed is achievable; they do not establish a validated motor or structural limit.</p>
             </div>
             <div class="project-sidebar">
                 <div class="sidebar-card">
@@ -92,10 +94,13 @@
                     <div class="tech-tags">
                         <span class="tag">MATLAB</span>
                         <span class="tag">SolidWorks</span>
-                        <span class="tag">BEM Theory</span>
+                        <span class="tag">BEMT</span>
                         <span class="tag">Aerodynamics</span>
-                        <span class="tag">Parametric CAD</span>
+                        <span class="tag">Prandtl Losses</span>
                     </div>
+                    <h3>Project Code &amp; Results</h3>
+                    <p><a class="project-link" href="https://github.com/ajlaw810/ajlaw810.github.io/blob/main/projects/drone-propeller/bemt_trade_study.m" target="_blank" rel="noopener">View MATLAB source</a></p>
+                    <p><a class="project-link" href="https://github.com/ajlaw810/ajlaw810.github.io/blob/main/projects/drone-propeller/results.csv" target="_blank" rel="noopener">View numerical results</a></p>
                 </div>
             </div>
         </div>
@@ -107,8 +112,8 @@
                 <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
                 <span>Back to Projects</span>
             </a>
-            <a href="https://github.com/ajlaw810" class="btn btn-secondary" target="_blank" rel="noopener">
-                <span>View MATLAB & CAD Repo</span>
+            <a href="https://github.com/ajlaw810/ajlaw810.github.io/blob/main/projects/drone-propeller/bemt_trade_study.m" class="btn btn-secondary" target="_blank" rel="noopener">
+                <span>View MATLAB Source</span>
                 <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
             </a>
         </div>
