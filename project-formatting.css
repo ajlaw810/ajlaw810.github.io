@@ -111,7 +111,4 @@
     display: flex; flex-direction: column; gap: 1.5rem;
     grid-column: 2; grid-row: 1;
   }
-  .project-page .otv-resources { grid-column: 1 / -1; }
-  .project-page .otv-resources > div { flex-direction: row !important; }
-  .project-page .otv-resources .btn { flex: 1; }
 }
